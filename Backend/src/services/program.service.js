@@ -1,20 +1,8 @@
 const Program = require("../models/program.model");
 
 // Get all programs
-const getAllPrograms = async (query) => {
-  const filter = { isActive: true };
-
-  // filter by category
-  if (query.category) {
-    filter.category = query.category;
-  }
-
-  // search by title
-  if (query.search) {
-    filter.title = { $regex: query.search, $options: "i" };
-  }
-
-  const programs = await Program.find(filter);
+const getAllPrograms = async () => {
+  const programs = await Program.find({ isActive: true });
   return programs;
 };
 
