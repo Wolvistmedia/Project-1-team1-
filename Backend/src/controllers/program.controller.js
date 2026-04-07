@@ -3,7 +3,7 @@ const programService = require("../services/program.service");
 // GET /api/programs
 const getPrograms = async (req, res) => {
   try {
-    const programs = await programService.getAllPrograms(req.query);
+    const programs = await programService.getAllPrograms();
     res.json(programs);
   } catch (err) {
     res.status(500).json({ message: err.message });
