@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>azure-certifications-roadmap| Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+     
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="../contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header>
+
+<!-- Hero Section -->
+<section class="py-16 relative overflow-hidden bg-[#0b1120]">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    <p class="text-sm text-cyan-300 font-medium mb-4">Home > Programs > Microsoft Azure > Azure Certification Roadmap</p>
+
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+      <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+        Microsoft Azure Certification Roadmap
+      </span>
+    </h2>
+
+    <p class="text-gray-300 text-lg max-w-4xl leading-relaxed mb-10">
+      Master Azure across cloud fundamentals, administration, development, security, and expert architecture.
+      Comprehensive certification paths for every Azure role — from beginner to architect.
+    </p>
+
+    <!-- Top Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-3xl font-extrabold text-cyan-400 mb-2">13+</h3>
+        <p class="text-gray-300">Certifications</p>
+      </div>
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-3xl font-extrabold text-pink-400 mb-2">Expert-Led</h3>
+        <p class="text-gray-300">Training</p>
+      </div>
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-3xl font-extrabold text-cyan-400 mb-2">Hands-On</h3>
+        <p class="text-gray-300">Labs</p>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap gap-4 mb-8">
+      <a href="contact.html" class="bg-gradient-to-r from-cyan-500 to-pink-500 px-6 py-3 rounded-lg font-bold hover:scale-105 transition">
+        Request Quote
+      </a>
+      <a href="#" class="border border-cyan-400 text-cyan-300 px-6 py-3 rounded-lg font-bold hover:bg-cyan-500/10 transition">
+        Download Roadmap
+      </a>
+      <a href="contact.html" class="border border-pink-400 text-pink-300 px-6 py-3 rounded-lg font-bold hover:bg-pink-500/10 transition">
+        Contact Sales
+      </a>
+    </div>
+
+    <p class="text-gray-300 font-medium">
+      ✓ Trusted by Cloud Engineers, Architects & Security Teams Worldwide
+    </p>
+  </div>
+</section>
+
+<!-- Program Snapshot -->
+<section class="py-20 relative overflow-hidden bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="mb-12">
+      <h2 class="text-4xl font-extrabold mb-6">Program Snapshot</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <p class="text-gray-200">13+ globally recognized Microsoft Azure certifications</p>
+      </div>
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <p class="text-gray-200">Fundamental, Associate, and Expert certification tracks</p>
+      </div>
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <p class="text-gray-200">Security & Identity specialist certifications (SC series)</p>
+      </div>
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <p class="text-gray-200">Data, AI, and DevOps specialization paths</p>
+      </div>
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <p class="text-gray-200">Hands-on Azure lab environments</p>
+      </div>
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <p class="text-gray-200">Microsoft's leading enterprise cloud platform</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who Should Attend + Roles -->
+<section class="py-16 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-8">
+    <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+      <h3 class="text-2xl font-extrabold mb-4 text-cyan-400">Who Should Attend</h3>
+      <p class="text-gray-300 leading-8">
+        Cloud engineers, system administrators, developers, security engineers, data engineers, DevOps professionals,
+        or anyone pursuing Microsoft Azure expertise for enterprise cloud environments.
+      </p>
+    </div>
+
+    <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+      <h3 class="text-2xl font-extrabold mb-4 text-pink-400">Target Roles</h3>
+      <p class="text-gray-300 leading-8">
+        Azure Administrator, Cloud Architect, Azure Developer, Security Engineer, DevOps Engineer, Data Engineer,
+        AI Engineer, and Identity & Access Administrator.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Industry Recognition -->
+<section class="py-16 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="bg-gradient-to-br from-[#111827] to-[#0f172a] border border-white/10 rounded-3xl p-10">
+      <h3 class="text-3xl font-extrabold mb-4">Industry Recognition</h3>
+      <p class="text-gray-300 text-lg leading-8">
+        Microsoft Azure is the #2 cloud platform globally used by 95% of Fortune 500 companies.
+        Azure certifications are among the highest-paying and most in-demand credentials in cloud computing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Certification Tracks -->
+<section class="py-20 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-4xl font-extrabold mb-6">Azure Certification Tracks</h2>
+    <p class="text-gray-300 text-lg mb-12 max-w-4xl">
+      Choose your certification path based on your role and career goals. Each track builds expertise in core Azure competencies —
+      from cloud basics to advanced architecture and security.
+    </p>
+
+    <div class="space-y-10">
+
+      <!-- Track 1 -->
+      <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+        <h3 class="text-3xl font-extrabold text-cyan-400 mb-4">Track 1: Fundamental Level — Cloud Basics</h3>
+        <p class="text-gray-300 mb-8">Entry-level certifications ideal for beginners, sales, management, and anyone starting their cloud journey.</p>
+
+        <div class="space-y-6">
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-2xl font-bold mb-2">1. AZ-900: Microsoft Azure Fundamentals</h4>
+            <p class="text-cyan-300 mb-2">Beginner | Cloud Concepts | 1 month</p>
+            <p class="text-gray-300 mb-3">Level: Beginner | Focus: Cloud concepts, Azure services, pricing, governance</p>
+            <p class="text-gray-300 leading-7 mb-4">
+              The perfect starting point for anyone new to Azure. Learn core cloud concepts, Azure services overview,
+              pricing models, and governance fundamentals. Ideal for all roles — technical and non-technical alike.
+            </p>
+            <a href="azure-fundamentals-az-900.html" class="text-cyan-300 font-medium hover:text-cyan-200 transition">View Full Program ↗</a>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">2. AI-900: Microsoft Azure AI Fundamentals</h4>
+            <p class="text-gray-300">Beginner | AI & ML Concepts | 1 month</p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">3. DP-900: Microsoft Azure Data Fundamentals</h4>
+            <p class="text-gray-300">Beginner | Data Concepts | 1 month</p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">4. SC-900: Microsoft Security, Compliance & Identity Fundamentals</h4>
+            <p class="text-gray-300">Beginner | Security Concepts | 1 month</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 2 -->
+      <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+        <h3 class="text-3xl font-extrabold text-pink-400 mb-4">Track 2: Associate Level — Intermediate Roles</h3>
+        <p class="text-gray-300 mb-8">Intermediate certifications for cloud engineers, security engineers, developers, and DevOps professionals.</p>
+
+        <div class="space-y-6">
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-2xl font-bold mb-2">1. AZ-104: Microsoft Azure Administrator Associate</h4>
+            <p class="text-pink-300 mb-2">Intermediate | Cloud Administration | 2–3 months</p>
+            <p class="text-gray-300 mb-3">Level: Intermediate | Focus: Identity, compute, storage, networking, monitoring</p>
+            <p class="text-gray-300 leading-7 mb-4">
+              Master Azure administration skills — managing subscriptions, identities, virtual networks, storage accounts,
+              virtual machines, and monitoring solutions. The core certification for Azure administrators.
+            </p>
+            <a href="azure-administrator-az-104.html" class="text-pink-300 font-medium hover:text-pink-200 transition">View Full Program ↗</a>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">2. AZ-204: Microsoft Azure Developer Associate</h4>
+            <p class="text-gray-300">Intermediate | Cloud Development | 2–3 months</p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">3. AZ-500: Microsoft Azure Security Engineer Associate</h4>
+            <p class="text-gray-300">Intermediate | Cloud Security | 2–3 months</p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">4. DP-203: Azure Data Engineer Associate</h4>
+            <p class="text-gray-300">Intermediate | Data Engineering | 2–3 months</p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">5. AI-102: Azure AI Engineer Associate</h4>
+            <p class="text-gray-300">Intermediate | AI Engineering | 2–3 months</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 3 -->
+      <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+        <h3 class="text-3xl font-extrabold text-cyan-400 mb-4">Track 3: Expert Level — Advanced Architecture & DevOps</h3>
+        <p class="text-gray-300 mb-8">Advanced certifications requiring hands-on Azure experience. Ideal for architects and senior DevOps engineers.</p>
+
+        <div class="space-y-6">
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-2xl font-bold mb-2">1. AZ-305: Microsoft Azure Solutions Architect Expert</h4>
+            <p class="text-cyan-300 mb-2">Advanced | Architecture Design | 3–4 months</p>
+            <p class="text-gray-300 mb-3">Level: Expert | Focus: Governance, identity, compute, networking, data, and business continuity design</p>
+            <p class="text-gray-300 leading-7 mb-4">
+              Design end-to-end Azure solutions for complex enterprise requirements. Covers infrastructure architecture,
+              governance design, data solutions, and business continuity strategies. Requires AZ-104 as prerequisite.
+            </p>
+            <a href="azure-solutions-architect-az-305.html" class="text-cyan-300 font-medium hover:text-cyan-200 transition">View Full Program ↗</a>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">2. AZ-400: Microsoft DevOps Engineer Expert</h4>
+            <p class="text-gray-300">Advanced | DevOps Practices | 3–4 months</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 4 -->
+      <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+        <h3 class="text-3xl font-extrabold text-pink-400 mb-4">Track 4: Security & Specialty Certifications</h3>
+        <p class="text-gray-300 mb-8">Advanced security certifications focusing on SIEM, SOC operations, identity management, and information protection.</p>
+
+        <div class="space-y-6">
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-2xl font-bold mb-2">1. SC-100: Microsoft Cybersecurity Architect Expert</h4>
+            <p class="text-pink-300 mb-2">Expert | Security Architecture | 3–4 months</p>
+            <p class="text-gray-300 mb-3">Level: Expert | Focus: Zero Trust strategy, security operations, identity security, regulatory compliance</p>
+            <p class="text-gray-300 leading-7">
+              Design a comprehensive Microsoft cybersecurity strategy across Zero Trust architecture, GRC, security operations,
+              and identity security solutions. The highest-level Microsoft security certification.
+            </p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">2. SC-200: Microsoft Security Operations Analyst Associate</h4>
+            <p class="text-gray-300">Intermediate | SOC & SIEM | 2–3 months</p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">3. SC-300: Microsoft Identity & Access Administrator Associate</h4>
+            <p class="text-gray-300">Intermediate | Identity & Access | 2–3 months</p>
+          </div>
+
+          <div class="border border-white/10 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-2">4. SC-400: Microsoft Information Protection Administrator Associate</h4>
+            <p class="text-gray-300">Intermediate | Data Protection | 2–3 months</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What You Will Learn -->
+<section class="py-20 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-4xl font-extrabold mb-12">What You Will Learn</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+        <h3 class="text-2xl font-bold text-cyan-400 mb-4">Cloud Fundamentals & Administration</h3>
+        <ul class="space-y-3 text-gray-300 leading-7">
+          <li>Azure architecture and core services</li>
+          <li>Virtual machines, networking, and storage</li>
+          <li>Identity and access management (IAM)</li>
+          <li>Azure subscription and cost management</li>
+        </ul>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+        <h3 class="text-2xl font-bold text-pink-400 mb-4">Development, Data & AI</h3>
+        <ul class="space-y-3 text-gray-300 leading-7">
+          <li>Cloud-native application development</li>
+          <li>Data pipelines and analytics workloads</li>
+          <li>Azure Cognitive Services and AI models</li>
+          <li>Serverless and event-driven architectures</li>
+        </ul>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-3xl p-8">
+        <h3 class="text-2xl font-bold text-cyan-400 mb-4">Security, DevOps & Architecture</h3>
+        <ul class="space-y-3 text-gray-300 leading-7">
+          <li>Azure security controls and threat protection</li>
+          <li>CI/CD pipelines and infrastructure as code</li>
+          <li>Zero Trust security architecture design</li>
+          <li>Enterprise governance and compliance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Training Highlights -->
+<section class="py-20 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-4xl font-extrabold mb-12">Training Highlights</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Hands-on Azure Labs</h3>
+        <p class="text-gray-300">Live Azure sandbox environments for real-world practice across administration, security, DevOps, and development scenarios.</p>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-pink-400">Real-World Scenarios</h3>
+        <p class="text-gray-300">Learn through enterprise-grade case studies and configurations used by actual Azure architects, security engineers, and DevOps teams.</p>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Exam Preparation</h3>
+        <p class="text-gray-300">Comprehensive coverage of all Microsoft exam objectives with practice tests, review sessions, and study guides for each certification.</p>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-pink-400">Career Advancement</h3>
+        <p class="text-gray-300">Interview prep, resume building, and job search support for Azure cloud roles across India and global organizations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Azure -->
+<section class="py-20 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-4xl font-extrabold mb-12">Why Choose Microsoft Azure Certifications</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Industry Leader</h3>
+        <p class="text-gray-300">Azure is #2 globally and #1 in enterprise adoption. Used by 95% of Fortune 500 companies for critical cloud workloads.</p>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-pink-400">Multiple Specializations</h3>
+        <p class="text-gray-300">Choose your path — Administration, Development, Security, Data, AI, or DevOps. 13+ certifications covering every cloud role.</p>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">High Demand & Salary</h3>
+        <p class="text-gray-300">Azure-certified professionals are among the highest-paid in IT. Critical shortage of certified Azure architects and security engineers globally.</p>
+      </div>
+
+      <div class="bg-[#111827] border border-white/10 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-3 text-pink-400">Practical, Job-Ready Skills</h3>
+        <p class="text-gray-300">All training focuses on real Azure environments, hands-on labs, and enterprise scenarios that directly map to job responsibilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-24 relative overflow-hidden bg-[#0b1120]">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
+          Ready to Master Microsoft Azure?
+        </h2>
+
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-8 mb-8">
+          Get expert training, lab access, exam prep, and batch scheduling for your team.
+        </p>
+
+        <div class="flex justify-center gap-4 flex-wrap">
+          <a href="contact.html" class="inline-block px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium hover:bg-cyan-500/20 transition">
+            Request Free Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <!-- Footer Section -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Download App -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com</br>
+          +91 8383854378</br>
+          Bengaluru, Karnataka, India
+        </p>
+        
+      
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

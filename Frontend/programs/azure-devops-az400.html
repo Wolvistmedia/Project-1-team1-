@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>azure-devops-az400 | Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+     
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="../contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header>
+
+
+<!-- Hero Section -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    <p class="text-cyan-300 text-sm md:text-base font-semibold mb-4 uppercase tracking-[0.18em]">
+      Microsoft Azure • Expert Certification
+    </p>
+
+    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 max-w-5xl">
+      <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+        Microsoft DevOps Engineer AZ-400
+      </span>
+    </h1>
+
+    <p class="text-gray-300 text-lg md:text-xl max-w-4xl leading-relaxed mb-8">
+      Design and implement DevOps practices on Azure using source control, CI/CD pipelines, infrastructure as code, security integration, and observability. The expert-level path for engineers building high-velocity delivery systems.
+    </p>
+
+
+    <!-- Top Meta -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-5">
+        <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Exam</p>
+        <h3 class="text-2xl font-bold text-white">AZ-400</h3>
+      </div>
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-5">
+        <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Level</p>
+        <h3 class="text-2xl font-bold text-white">Expert</h3>
+      </div>
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-5">
+        <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Duration</p>
+        <h3 class="text-2xl font-bold text-white">6–8 Weeks</h3>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap gap-4 mb-8">
+      <a href="contact.html" class="bg-gradient-to-r from-cyan-500 to-pink-500 px-7 py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:scale-105 transition duration-300">
+        Start Training
+      </a>
+      <a href="#" class="border border-cyan-400/30 bg-cyan-500/10 text-cyan-300 px-7 py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-cyan-500/20 transition">
+        Download Syllabus
+      </a>
+      <a href="contact.html" class="border border-pink-400/30 bg-pink-500/10 text-pink-300 px-7 py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-pink-500/20 transition">
+        Book Demo
+      </a>
+    </div>
+
+    <p class="text-gray-300 text-sm md:text-base font-medium">
+      ✓ Expert-Level Certification &nbsp;|&nbsp; ✓ CI/CD and IaC Labs &nbsp;|&nbsp; ✓ Prerequisite: AZ-104 or AZ-204
+    </p>
+  </div>
+</section>
+
+<!-- Program Overview -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="mb-12">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-5">
+        <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">Program Overview</span>
+      </h2>
+      <p class="text-gray-300 text-lg max-w-3xl">
+        Full AZ-400 exam objective coverage with practical DevOps delivery, automation, release engineering, security, and observability workflows.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-6">
+        <h3 class="text-xl font-bold text-white mb-3">Exam Coverage</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li>• Full AZ-400 exam objective coverage</li>
+          <li>• Azure DevOps and GitHub enterprise workflows</li>
+          <li>• CI/CD pipeline implementation and optimization</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-6">
+        <h3 class="text-xl font-bold text-white mb-3">Technical Depth</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li>• Infrastructure as code with ARM, Bicep, Terraform</li>
+          <li>• Security integration across DevOps lifecycle</li>
+          <li>• Monitoring, feedback loops, and reliability practices</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-6">
+        <h3 class="text-xl font-bold text-white mb-3">Career Value</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li>• Expert-level DevOps engineering pathway</li>
+          <li>• Real-world delivery workflow readiness</li>
+          <li>• Architecture and automation-focused preparation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who Should Attend / Prerequisites / What You Get -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="absolute top-10 left-10 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 right-10 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <h3 class="text-2xl font-bold text-white mb-5">Who Should Attend</h3>
+        <p class="text-gray-300 leading-8">
+          DevOps engineers, cloud engineers, software engineers, release managers, and Azure professionals aiming for expert-level automation and delivery roles.
+        </p>
+      </div>
+
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <h3 class="text-2xl font-bold text-white mb-5">Prerequisites</h3>
+        <p class="text-gray-300 leading-8">
+          AZ-104 or AZ-204 certification required before attempting AZ-400. Working knowledge of Git, CI/CD concepts, cloud infrastructure, and scripting is strongly recommended.
+        </p>
+      </div>
+
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <h3 class="text-2xl font-bold text-white mb-5">What You Get</h3>
+        <p class="text-gray-300 leading-8">
+          Course materials, hands-on CI/CD labs, IaC practice environments, exam-focused question bank, instructor support, and DevOps interview preparation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="mb-14">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">Course Curriculum</span>
+      </h2>
+      <p class="text-gray-300 text-lg max-w-4xl leading-relaxed">
+        Comprehensive training covering all AZ-400 domains with practical projects across planning, source control, build, release, security, and monitoring.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Module 1 -->
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <p class="text-cyan-300 font-semibold uppercase tracking-[0.18em] text-sm mb-3">Module 1 • 10–15%</p>
+        <h3 class="text-3xl font-extrabold text-white mb-4">Design and Implement DevOps Processes</h3>
+        <p class="text-gray-300 text-lg mb-8">Define collaboration models, Agile planning workflows, and project visibility across engineering teams.</p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Collaboration Strategy</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Design team structures and DevOps operating model</li>
+              <li>• Implement communication and handoff workflows</li>
+              <li>• Define value stream mapping practices</li>
+              <li>• Set measurable DevOps KPIs and goals</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Work Item and Backlog Management</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Configure Azure Boards for Agile and Scrum</li>
+              <li>• Plan sprint boards, epics, and user stories</li>
+              <li>• Design traceability across requirements and releases</li>
+              <li>• Implement dashboards for delivery insights</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Process Improvement</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Apply Lean principles for delivery optimization</li>
+              <li>• Use feedback loops for continuous improvement</li>
+              <li>• Reduce bottlenecks and lead time</li>
+              <li>• Design governance with change control policies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <p class="text-pink-300 font-semibold uppercase tracking-[0.18em] text-sm mb-3">Module 2 • 10–15%</p>
+        <h3 class="text-3xl font-extrabold text-white mb-4">Source Control and Build Strategies</h3>
+        <p class="text-gray-300 text-lg mb-8">Implement Git strategy, repository standards, automated builds, and package management.</p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Git and Repository Management</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Design branching strategy (GitFlow, trunk-based)</li>
+              <li>• Configure pull request policies and code reviews</li>
+              <li>• Implement repository permissions and protections</li>
+              <li>• Integrate Azure Repos and GitHub workflows</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Build Pipeline Design</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Create YAML-based Azure Pipelines</li>
+              <li>• Configure build agents and hosted runners</li>
+              <li>• Implement multi-stage build validation</li>
+              <li>• Optimize build performance and caching</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Artifacts and Package Management</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Manage artifacts in Azure Artifacts</li>
+              <li>• Use NuGet, npm, Maven feed strategies</li>
+              <li>• Versioning and package retention policies</li>
+              <li>• Secure package publishing workflows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <p class="text-cyan-300 font-semibold uppercase tracking-[0.18em] text-sm mb-3">Module 3 • 15–20%</p>
+        <h3 class="text-3xl font-extrabold text-white mb-4">Release and Deployment Strategies</h3>
+        <p class="text-gray-300 text-lg mb-8">Build resilient release pipelines and deploy applications safely across environments.</p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Release Pipeline Architecture</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Design multi-stage release pipelines</li>
+              <li>• Configure approvals, gates, and checks</li>
+              <li>• Implement environment promotion strategy</li>
+              <li>• Automate release with templates and variables</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Deployment Patterns</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Implement blue/green and canary deployments</li>
+              <li>• Configure deployment slots for App Service</li>
+              <li>• Use feature flags and progressive rollout</li>
+              <li>• Design rollback and recovery strategy</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Infrastructure as Code (IaC)</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Provision infrastructure using ARM and Bicep</li>
+              <li>• Manage resources with Terraform</li>
+              <li>• Integrate IaC into CI/CD workflows</li>
+              <li>• Implement state and drift management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <p class="text-pink-300 font-semibold uppercase tracking-[0.18em] text-sm mb-3">Module 4 • 10–15%</p>
+        <h3 class="text-3xl font-extrabold text-white mb-4">Security and Compliance</h3>
+        <p class="text-gray-300 text-lg mb-8">Embed security controls into the pipeline and enforce governance in delivery workflows.</p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Secure Pipeline Design</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Implement secret management with Key Vault</li>
+              <li>• Harden service connections and access scopes</li>
+              <li>• Configure pipeline permissions and checks</li>
+              <li>• Use signed artifacts and integrity controls</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">DevSecOps Practices</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Integrate SAST, DAST, and dependency scanning</li>
+              <li>• Enforce policy-as-code and compliance gates</li>
+              <li>• Automate vulnerability reporting workflows</li>
+              <li>• Implement SBOM and supply-chain protections</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Governance and Auditing</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Configure audit trails for release activities</li>
+              <li>• Design compliance reporting dashboards</li>
+              <li>• Align with enterprise risk requirements</li>
+              <li>• Manage evidence collection for audits</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="rounded-3xl bg-[#111827] border border-white/10 p-8">
+        <p class="text-cyan-300 font-semibold uppercase tracking-[0.18em] text-sm mb-3">Module 5 • 10–15%</p>
+        <h3 class="text-3xl font-extrabold text-white mb-4">Monitoring and Continuous Improvement</h3>
+        <p class="text-gray-300 text-lg mb-8">Establish observability, operational feedback, and reliability engineering practices.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Application Monitoring</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Configure Application Insights and telemetry</li>
+              <li>• Build dashboards for health and performance</li>
+              <li>• Set alerts and action groups</li>
+              <li>• Correlate metrics, logs, and traces</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Reliability and Incident Response</h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>• Define SLO/SLI objectives and error budgets</li>
+              <li>• Implement incident workflows and runbooks</li>
+              <li>• Automate post-incident review process</li>
+              <li>• Design chaos testing and resilience drills</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career Path -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="mb-12">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-5">
+        <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">Career Path After AZ-400</span>
+      </h2>
+      <p class="text-gray-300 text-lg max-w-3xl">
+        Position yourself for advanced delivery, automation, platform, and reliability engineering roles.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-6">
+        <h3 class="text-xl font-bold text-white">Site Reliability Engineer (SRE)</h3>
+      </div>
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-6">
+        <h3 class="text-xl font-bold text-white">Cloud Platform Engineer</h3>
+      </div>
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-6">
+        <h3 class="text-xl font-bold text-white">Principal DevOps Engineer</h3>
+      </div>
+      <div class="rounded-2xl bg-[#111827] border border-white/10 p-6">
+        <h3 class="text-xl font-bold text-white">AZ-305 and SC-100 Advanced Pathways</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
+          Need Batch Dates or Corporate Proposal?
+        </h2>
+
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+          Get trainer availability, pricing, and delivery model based on your timeline.
+        </p>
+
+        <div class="flex justify-center flex-wrap gap-4">
+          <a href="contact.html" class="inline-block px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium hover:bg-cyan-500/20 transition">
+            Request Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+    
+    <!-- Footer Section -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Download App -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com</br>
+          +91 8383854378</br>
+          Bengaluru, Karnataka, India
+        </p>
+        
+      
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

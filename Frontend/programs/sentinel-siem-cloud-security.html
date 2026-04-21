@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel SIEM and Cloud Security Operations | Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+        
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="../contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header>
+<!-- ========== PAGE CONTENT START ========== -->
+
+<!-- Hero Section -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- Heading -->
+    <div class="max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-500 bg-clip-text text-transparent">
+          Sentinel SIEM and Cloud Security Operations
+        </span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl">
+        Build real SOC capabilities with Microsoft Sentinel across SIEM architecture, cloud log ingestion, KQL analytics, incident response, threat hunting, automation, and executive dashboards. Comprehensive hands-on training for cloud-native security operations.
+      </p>
+    </div>
+
+    <!-- Quick Action Buttons -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="../contact.html" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-bold hover:scale-105 transition">Request Quote</a>
+      <a href="../contact.html" class="px-6 py-3 border border-cyan-400/50 rounded-lg font-bold hover:bg-cyan-500/10 transition">Download Roadmap</a>
+      <a href="../contact.html" class="px-6 py-3 border border-pink-500/50 rounded-lg font-bold hover:bg-pink-500/10 transition">Talk to Advisor</a>
+    </div>
+
+    <!-- Badges Row -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-sm">✓ Format: 10 Modules</span>
+      <span class="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm">✓ Level: Beginner to Intermediate</span>
+      <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm">✓ Duration: 8-12 Weeks</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Cards -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-cyan-400 mb-2">10</div>
+        <div class="text-gray-300">Comprehensive Modules</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-pink-400 mb-2">Beginner</div>
+        <div class="text-gray-300">to Intermediate</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-blue-400 mb-2">8-12</div>
+        <div class="text-gray-300">Weeks Duration</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-green-400 mb-2">Hands-on</div>
+        <div class="text-gray-300">Sentinel Labs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program Overview + Who Should Attend -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Program Overview</h2>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> End-to-end SOC workflow implementation</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Microsoft Sentinel setup and architecture</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Data connectors and real log ingestion labs</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> KQL queries, analytics, and dashboards</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Detection rules, incident triage, and hunting</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Logic Apps playbooks for auto-response</li>
+        </ul>
+      </div>
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Who Should Attend</h2>
+        <p class="text-gray-300 leading-relaxed">SOC analysts, cybersecurity engineers, Azure admins, cloud security learners, and IT professionals who want practical SIEM and cloud security operations skills.</p>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">Prerequisites</h3>
+          <p class="text-gray-300">Basic networking and security concepts recommended. Prior SIEM or Azure experience is helpful but not required; fundamentals are covered in the early modules.</p>
+        </div>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">What You Get</h3>
+          <p class="text-gray-300">Hands-on labs, guided Sentinel workspace setup, KQL practice packs, detection engineering templates, incident playbooks, and interview-oriented SOC scenarios.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- View Certifications Link -->
+<section class="bg-[#0b1120] py-12 relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 md:px-10 text-center">
+    <div class="bg-gradient-to-r from-cyan-500/10 to-pink-500/10 rounded-2xl p-6 border border-white/10">
+      <p class="text-gray-300 text-lg">Looking for certification roadmaps? Explore our <a href="#" class="text-cyan-400 hover:underline">Cloud Security Certifications Roadmap</a> for AWS, Azure, GCP, and CCSP paths.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Course Curriculum (10 Modules) -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Course Curriculum</h2>
+    <p class="text-center text-gray-400 mb-12">Structured 10-module journey from SIEM basics to production-grade Microsoft Sentinel operations and automation.</p>
+    
+    <div class="space-y-6">
+      
+      <!-- Module 1 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-cyan-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 1: Introduction to SIEM and Cloud Security</h3>
+          <p class="text-gray-400 text-sm">Understand SIEM foundations and how cloud-native security operations differ from traditional deployments.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">SIEM Fundamentals</h4><p class="text-gray-400 text-sm">What is SIEM · Traditional vs Cloud SIEM · Benefits of cloud SIEM · SIEM architecture</p></div>
+          <div><h4 class="text-pink-400 font-semibold">SOC Fundamentals</h4><p class="text-gray-400 text-sm">SOC workflow and analyst roles · Alert lifecycle · Use-case engineering basics · Process maturity concepts</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Microsoft Sentinel Overview</h4><p class="text-gray-400 text-sm">What Sentinel does · Core capabilities · Sentinel in Microsoft security stack · Common deployment models</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 2 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-pink-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 2: Azure Fundamentals for Security</h3>
+          <p class="text-gray-400 text-sm">Build the Azure foundation needed to deploy and operate Sentinel securely.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Azure Basics</h4><p class="text-gray-400 text-sm">Overview of Microsoft Azure · Portal navigation · Subscriptions and resource groups · Azure governance basics</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Core Azure Services</h4><p class="text-gray-400 text-sm">Azure networking basics · Storage concepts · Region and availability · Resource organization for SOC</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Identity and Access</h4><p class="text-gray-400 text-sm">Identity with Microsoft Entra ID · RBAC and least-privilege · Conditional access basics · Security best practices for SOC users</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 3 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 3: Microsoft Sentinel Architecture</h3>
+          <p class="text-gray-400 text-sm">Design a scalable Sentinel environment with the right ingestion and workspace strategy.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Sentinel Core Components</h4><p class="text-gray-400 text-sm">Sentinel components and control plane · Log Analytics workspace architecture · Data connectors and content hub · Analytics and incident engine overview</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Ingestion Architecture</h4><p class="text-gray-400 text-sm">Data ingestion patterns · Agent-based vs agentless collection · Connector prioritization · Multi-workspace design basics</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Commercials and Setup</h4><p class="text-gray-400 text-sm">Sentinel pricing and licensing · Cost estimation and retention planning · Workspace setup · Operational readiness checklist</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 4 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-green-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 4: Data Collection and Log Ingestion</h3>
+          <p class="text-gray-400 text-sm">Connect key enterprise sources and validate telemetry quality for threat detection.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Connector Configuration</h4><p class="text-gray-400 text-sm">Configuring data connectors · Using AMA and other agents · Connector health and troubleshooting · Validation of incoming log streams</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Log Sources</h4><p class="text-gray-400 text-sm">Windows server log collection · Linux server log collection · Firewall log integration · Cloud service telemetry onboarding</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Advanced Ingestion</h4><p class="text-gray-400 text-sm">Endpoint security tool integration · Syslog integration · CEF log ingestion · Normalization and schema mapping basics</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 5 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-purple-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 5: Log Management and Querying</h3>
+          <p class="text-gray-400 text-sm">Use KQL effectively to search, filter, correlate, and visualize security telemetry.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">KQL Essentials</h4><p class="text-gray-400 text-sm">Introduction to Kusto Query Language (KQL) · Searching logs and table selection · Filtering events and time windows · Creating reusable query patterns</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Analytical Queries</h4><p class="text-gray-400 text-sm">Event log analysis · Authentication log investigations · Network activity monitoring queries · Baseline and anomaly-style query design</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Dashboards and Workbooks</h4><p class="text-gray-400 text-sm">Building dashboards from KQL · Log Analytics workspace queries · Query optimization basics · Operational reporting views</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 6 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-orange-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 6: Detection and Analytics Rules</h3>
+          <p class="text-gray-400 text-sm">Engineer high-quality detections that reduce noise and improve SOC signal quality.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Rule Creation</h4><p class="text-gray-400 text-sm">Creating detection rules · Scheduled analytics rules · Near real-time rules · Alert threshold tuning strategies</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Threat Framework Alignment</h4><p class="text-gray-400 text-sm">MITRE ATT&CK mapping · Threat scenario modeling · Use-case prioritization · Coverage gap identification</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Custom Detection Engineering</h4><p class="text-gray-400 text-sm">Alert generation workflows · Custom threat detection logic · Suppression and false-positive reduction · Detection validation testing</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 7 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-teal-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 7: Incident Management</h3>
+          <p class="text-gray-400 text-sm">Operationalize response with triage, investigation, correlation, and closure workflows.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Incident Foundations</h4><p class="text-gray-400 text-sm">Understanding incidents in Sentinel · Incident severity and prioritization · Alert grouping and correlation basics · Ownership and escalation paths</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Investigation Workflows</h4><p class="text-gray-400 text-sm">Incident investigation techniques · Timeline analysis · Entity investigation graph usage · Evidence collection and documentation</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Case Management</h4><p class="text-gray-400 text-sm">Case management lifecycle · Incident response workflow · Runbooks and playbook handoffs · Post-incident review process</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 8 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 8: Threat Hunting</h3>
+          <p class="text-gray-400 text-sm">Use hypothesis-driven hunting to uncover stealthy attacker behavior before alerts fire.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Hunting Methodology</h4><p class="text-gray-400 text-sm">Threat hunting methodology · Hypothesis-driven hunt planning · Data source selection for hunts · Hunt cycle execution process</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Hunting Queries and Behavior</h4><p class="text-gray-400 text-sm">Hunting queries in KQL · Behavioral analysis techniques · Detecting suspicious activities · Pattern and sequence analysis</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Threat Intelligence Integration</h4><p class="text-gray-400 text-sm">Using threat intelligence feeds · IOC matching and enrichment · Intelligence-driven detection ideas · Hunt-to-detection conversion</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 9 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-cyan-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 9: Automation and Response</h3>
+          <p class="text-gray-400 text-sm">Automate repetitive SOC tasks to reduce MTTR and improve consistency of response.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Automation Basics</h4><p class="text-gray-400 text-sm">Security automation fundamentals · Playbooks in Sentinel · Logic Apps integration · Trigger and action design patterns</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Response Workflows</h4><p class="text-gray-400 text-sm">Automated response workflows · Incident auto-remediation concepts · Containment and notification actions · Approval-driven response gates</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Automation Governance</h4><p class="text-gray-400 text-sm">Playbook versioning and testing · Error handling and retry strategies · Auditability and control checks · SOC integration best practices</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 10 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-pink-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 10: Dashboards and Visualization</h3>
+          <p class="text-gray-400 text-sm">Present actionable insights to SOC teams, managers, and stakeholders through workbooks and reports.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Workbook Design</h4><p class="text-gray-400 text-sm">Creating workbooks · SOC dashboards · Threat intelligence dashboards · KPI-first design strategy</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Visualization and Reporting</h4><p class="text-gray-400 text-sm">Custom visualization techniques · Operational and executive reporting · Alert and incident trend views · Hunt and detection performance dashboards</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Capstone Outcome</h4><p class="text-gray-400 text-sm">Build an end-to-end Sentinel SOC dashboard · Present incident lifecycle metrics · Map detection coverage to MITRE ATT&CK · Create role-based security reporting packs</p></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Master Cloud SIEM Operations CTA -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="max-w-5xl mx-auto px-6 md:px-10 text-center">
+    <div class="bg-gradient-to-r from-cyan-500/5 to-pink-500/5 rounded-2xl p-10 border border-white/10">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Master Cloud SIEM Operations</h2>
+      <p class="text-gray-300 text-lg mb-8">Deploy, operationalize, and optimize Microsoft Sentinel for real-world SOC operations, threat detection, and incident response.</p>
+      <a href="contact.html" class="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl font-bold text-lg hover:scale-105 transition">Enroll Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section (similar to original) -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-14 text-center">
+        <div class="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-[0.2em] mb-6">
+          Microsoft Sentinel Training
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+          Ready to Master Cloud SIEM Operations?
+        </h2>
+
+        <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          Get batch schedules, pricing, and a customized learning plan with hands-on Sentinel labs and SOC workflows.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../contact.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold uppercase tracking-wide hover:bg-cyan-500/20 transition">
+            Request Free Consultation
+          </a>
+          <a href="../programs.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-bold uppercase tracking-wide hover:bg-pink-500/20 transition">
+            Explore Category Paths
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE CONTENT END ========== -->
+
+    <!-- Footer Section (exactly same as original) -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Contact -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com<br>
+          +91 8383854378<br>
+          Bengaluru, Karnataka, India
+        </p>
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

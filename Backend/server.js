@@ -8,9 +8,9 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 const cors = require("cors");
-const Program = require("./src/models/program.model");
+
 const connectDB = require("./src/config/db");
-const programRoutes = require("./src/routes/program.routes");
+
 const inquiryRoutes = require("./src/routes/inquiry.route");
 
 // Middlewares
@@ -20,7 +20,6 @@ app.use(express.json());
 // Connect DB
 connectDB();
 
-app.use("/programs", programRoutes);
 app.use("/inquiry", inquiryRoutes);
 
 

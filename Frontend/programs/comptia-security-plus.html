@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompTIA Security+ | Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+     
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="../contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header><!-- ========== PAGE CONTENT START ========== -->
+
+<!-- Hero Section -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- Heading -->
+    <div class="max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-500 bg-clip-text text-transparent">
+          CompTIA Security+
+        </span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl">
+        Security fundamentals, threats, identity, and risk management. Includes mentor-led sessions, labs, and interview prep.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Program Highlights Cards -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="absolute top-10 left-0 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-[1180px] mx-auto px-6 md:px-10 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1: Format -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)] hover:-translate-y-2 transition duration-300">
+          <div class="p-8">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-5">
+              Standard Online
+            </div>
+            <h3 class="text-white text-3xl font-extrabold mb-4">Format</h3>
+            <p class="text-gray-300 text-lg leading-8">
+              Standard (Live Corporate and Group)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Duration -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)] hover:-translate-y-2 transition duration-300">
+          <div class="p-8">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-semibold uppercase tracking-wider mb-5">
+              Weekend
+            </div>
+            <h3 class="text-white text-3xl font-extrabold mb-4">Duration</h3>
+            <p class="text-gray-300 text-lg leading-8">
+              24-40 Hours
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Labs -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)] hover:-translate-y-2 transition duration-300">
+          <div class="p-8">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-300 text-xs font-semibold uppercase tracking-wider mb-5">
+              Corporate
+            </div>
+            <h3 class="text-white text-3xl font-extrabold mb-4">Labs</h3>
+            <p class="text-gray-300 text-lg leading-8">
+              Hands-on Project Driven
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- What You Learn / Who Should Join / Outcome -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- What You Learn -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-8">
+          <h3 class="text-2xl font-bold text-white mb-6">What You Learn</h3>
+          <div class="space-y-5">
+            <div class="flex gap-3">
+              <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 mt-2"></div>
+              <p class="text-gray-200 font-medium leading-7">
+                Security fundamentals, threats, identity management, risk assessment, cryptography, and network security controls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Who Should Join -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-8">
+          <h3 class="text-2xl font-bold text-white mb-6">Who Should Join</h3>
+          <div class="space-y-5">
+            <div class="flex gap-3">
+              <div class="w-2.5 h-2.5 rounded-full bg-pink-400 mt-2"></div>
+              <p class="text-gray-200 font-medium leading-7">
+                IT professionals, aspiring security analysts, system administrators, and teams targeting entry-level cybersecurity roles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-8">
+          <h3 class="text-2xl font-bold text-white mb-6">Outcome</h3>
+          <div class="space-y-5">
+            <div class="flex gap-3">
+              <div class="w-2.5 h-2.5 rounded-full bg-green-400 mt-2"></div>
+              <p class="text-gray-200 font-medium leading-7">
+                Production-ready execution confidence, interview preparation, and a practical roadmap for your role goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CompTIA Security Career Path -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">CompTIA Security Career Path</h2>
+      <p class="text-gray-400 text-lg">Build a complete cybersecurity progression from foundational knowledge to advanced enterprise security leadership.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Security+ -->
+      <div class="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/20 hover:-translate-y-2 transition duration-300">
+        <div class="text-cyan-400 text-3xl font-bold mb-2">1</div>
+        <h3 class="text-xl font-bold text-white mb-2">CompTIA Security+</h3>
+        <p class="text-gray-400 text-sm">SY0-701</p>
+        <p class="text-gray-300 text-sm mt-3">The premier entry-level certification for security roles, covering foundational concepts such as threat management, cryptography, and network security.</p>
+        <div class="mt-4 inline-block px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs">Entry-Level Foundation</div>
+      </div>
+      
+      <!-- CySA+ -->
+      <div class="bg-gradient-to-br from-pink-500/10 to-transparent rounded-2xl p-6 border border-pink-500/20 hover:-translate-y-2 transition duration-300">
+        <div class="text-pink-400 text-3xl font-bold mb-2">2</div>
+        <h3 class="text-xl font-bold text-white mb-2">CompTIA CySA+</h3>
+        <p class="text-gray-400 text-sm">Cybersecurity Analyst</p>
+        <p class="text-gray-300 text-sm mt-3">Focused on behavioral analytics to strengthen incident response and threat detection within Security Operations Centers (SOC).</p>
+        <div class="mt-4 inline-block px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs">Intermediate | SOC-Focused</div>
+      </div>
+      
+      <!-- PenTest+ -->
+      <div class="bg-gradient-to-br from-orange-500/10 to-transparent rounded-2xl p-6 border border-orange-500/20 hover:-translate-y-2 transition duration-300">
+        <div class="text-orange-400 text-3xl font-bold mb-2">3</div>
+        <h3 class="text-xl font-bold text-white mb-2">CompTIA PenTest+</h3>
+        <p class="text-gray-400 text-sm">Penetration Testing</p>
+        <p class="text-gray-300 text-sm mt-3">Validates intermediate-level skills in vulnerability management, penetration testing, and security assessment management.</p>
+        <div class="mt-4 inline-block px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 text-xs">Intermediate | Hands-on Testing</div>
+      </div>
+      
+      <!-- SecurityX (CASP+) -->
+      <div class="bg-gradient-to-br from-purple-500/10 to-transparent rounded-2xl p-6 border border-purple-500/20 hover:-translate-y-2 transition duration-300">
+        <div class="text-purple-400 text-3xl font-bold mb-2">4</div>
+        <h3 class="text-xl font-bold text-white mb-2">CompTIA SecurityX</h3>
+        <p class="text-gray-400 text-sm">formerly CASP+</p>
+        <p class="text-gray-300 text-sm mt-3">An advanced, expert-level certification for senior security architects and engineers, focused on enterprise security implementation and leadership.</p>
+        <div class="mt-4 inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs">Expert | Enterprise Architecture</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- CompTIA Cybersecurity Certifications Section -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">CompTIA Cybersecurity Certifications</h2>
+    <div class="space-y-6">
+      
+      <div class="bg-[#111827] rounded-2xl p-6 border border-white/5">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-bold text-cyan-400 mb-1">1. CompTIA Security+ (SY0-701)</h3>
+            <p class="text-gray-300 text-sm">The premier entry-level certification for security roles, covering foundational concepts such as threat management, cryptography, and network security.</p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs whitespace-nowrap">Entry-Level Foundation</span>
+        </div>
+      </div>
+      
+      <div class="bg-[#111827] rounded-2xl p-6 border border-white/5">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-bold text-pink-400 mb-1">2. CompTIA Cybersecurity Analyst (CySA+)</h3>
+            <p class="text-gray-300 text-sm">Focused on behavioral analytics to strengthen incident response and threat detection within Security Operations Centers (SOC).</p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-pink-500/10 text-pink-300 text-xs whitespace-nowrap">Intermediate | SOC-Focused</span>
+        </div>
+      </div>
+      
+      <div class="bg-[#111827] rounded-2xl p-6 border border-white/5">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-bold text-orange-400 mb-1">3. CompTIA PenTest+</h3>
+            <p class="text-gray-300 text-sm">Validates intermediate-level skills in vulnerability management, penetration testing, and security assessment management.</p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-orange-500/10 text-orange-300 text-xs whitespace-nowrap">Intermediate | Hands-on Testing</span>
+        </div>
+      </div>
+      
+      <div class="bg-[#111827] rounded-2xl p-6 border border-white/5">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-bold text-purple-400 mb-1">4. CompTIA SecurityX (formerly CASP+)</h3>
+            <p class="text-gray-300 text-sm">An advanced, expert-level certification for senior security architects and engineers, focused on enterprise security implementation and leadership.</p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 text-xs whitespace-nowrap">Expert | Enterprise Architecture</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-14 text-center">
+        <div class="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-[0.2em] mb-6">
+          CompTIA Security+ Training
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+          Need Batch Dates or Corporate Proposal?
+        </h2>
+
+        <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          Get trainer availability, pricing, and delivery model based on your timeline.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold uppercase tracking-wide hover:bg-cyan-500/20 transition">
+            Request Consultation
+          </a>
+          <a href="programs.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-bold uppercase tracking-wide hover:bg-pink-500/20 transition">
+            Explore Category Paths
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE CONTENT END ========== -->
+
+    <!-- Footer Section -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Download App -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com</br>
+          +91 8383854378</br>
+          Bengaluru, Karnataka, India
+        </p>
+        
+      
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

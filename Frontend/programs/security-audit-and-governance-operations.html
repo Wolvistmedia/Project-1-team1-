@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Audit and Governance Operations | Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+        
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="../contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header>
+<!-- ========== PAGE CONTENT START ========== -->
+
+<!-- Hero Section -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- Heading -->
+    <div class="max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-500 bg-clip-text text-transparent">
+          Security Audit and Governance Operations
+        </span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl">
+        Deep practical program aligned to CISA, CISM, CRISC, ISO 27001 Lead Auditor, and CISSP requirements. Learn to run audits, design controls, manage risk, and build enterprise-grade security governance programs.
+      </p>
+    </div>
+
+    <!-- Quick Action Buttons -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="contact.html" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-bold hover:scale-105 transition">Enroll Now</a>
+      <a href="contact.html" class="px-6 py-3 border border-cyan-400/50 rounded-lg font-bold hover:bg-cyan-500/10 transition">View Schedule</a>
+      <a href="contact.html" class="px-6 py-3 border border-pink-500/50 rounded-lg font-bold hover:bg-pink-500/10 transition">Contact Sales</a>
+    </div>
+
+    <!-- Badges Row -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-sm">✓ 10 Comprehensive Modules</span>
+      <span class="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm">✓ Audit and Risk Labs</span>
+      <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm">✓ Compliance-Driven Scenarios</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Cards -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-cyan-400 mb-2">10</div>
+        <div class="text-gray-300">Comprehensive Modules</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-pink-400 mb-2">Audit</div>
+        <div class="text-gray-300">+ Risk Labs</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-blue-400 mb-2">5+</div>
+        <div class="text-gray-300">Certification Alignments</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-green-400 mb-2">Enterprise</div>
+        <div class="text-gray-300">Governance Ready</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program Snapshot & Who Should Attend -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Course Essentials</h2>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> CISA-aligned IS auditing foundations</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> CISM governance and incident management</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> CRISC risk and controls design</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> ISO 27001 lead audit lifecycle</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> CISSP governance and architecture context</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Real-world compliance and evidence workflows</li>
+        </ul>
+      </div>
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Who Should Attend</h2>
+        <p class="text-gray-300 leading-relaxed">IT auditors, security auditors, compliance professionals, risk analysts, security managers, SOC managers, and leadership-track candidates.</p>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">Duration and Format</h3>
+          <p class="text-gray-300">10 modules | instructor-led | audit labs | online, weekend, and corporate formats.</p>
+        </div>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">Prerequisites</h3>
+          <p class="text-gray-300">Basic IT infrastructure and security understanding. Audit/governance exposure is beneficial but not mandatory.</p>
+        </div>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">Certification Roadmap</h3>
+          <p class="text-gray-300">See level-based certification guidance in Information Security Audit Certifications Roadmap.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 Modules Section (Detailed) -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">10 Comprehensive Modules</h2>
+    <p class="text-center text-gray-400 mb-12">Audit lifecycle, risk management, control design, governance frameworks, and certification strategy</p>
+    
+    <div class="space-y-12">
+      
+      <!-- Module 1 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-cyan-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 1: Information Systems Auditing Foundations (CISA)</h3>
+          <p class="text-gray-400 text-sm">Audit lifecycle, scope definition, sampling, evidence collection, and reporting principles.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Audit Lifecycle</h4><p class="text-gray-400 text-sm">Planning and objective setting · Scoping and stakeholder alignment · Execution checkpoints · Closure and reporting</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Evidence and Controls</h4><p class="text-gray-400 text-sm">Control testing techniques · Evidence quality criteria · Gap documentation · Audit trail integrity</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Audit Reporting</h4><p class="text-gray-400 text-sm">Findings prioritization · Risk impact articulation · Management action plans · Follow-up tracking</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 2 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-pink-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 2: IT Governance and Policy Management (CISA/CISM)</h3>
+          <p class="text-gray-400 text-sm">Governance frameworks, policy structures, accountability models, and board-level reporting.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Governance Frameworks</h4><p class="text-gray-400 text-sm">COBIT and governance mapping · Policy hierarchy models · Roles and accountability · Executive governance metrics</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Policy Lifecycle</h4><p class="text-gray-400 text-sm">Drafting and approvals · Control ownership definition · Policy communication plans · Periodic policy reviews</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Management Reporting</h4><p class="text-gray-400 text-sm">KRI and KPI design · Governance dashboards · Board reporting patterns · Escalation criteria</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 3 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 3: Risk Management and Assessment (CRISC)</h3>
+          <p class="text-gray-400 text-sm">Risk identification, analysis, appetite alignment, and response planning.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Risk Identification</h4><p class="text-gray-400 text-sm">Threat and vulnerability mapping · Business process risk discovery · Asset criticality analysis · Dependency risk reviews</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Risk Analysis</h4><p class="text-gray-400 text-sm">Qualitative risk scoring · Impact and likelihood modeling · Residual risk calculations · Scenario-based analysis</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Risk Response</h4><p class="text-gray-400 text-sm">Mitigate, transfer, accept, avoid · Control selection mapping · Risk treatment plans · Monitoring and governance</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 4 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-green-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 4: Control Design and IT Risk Mitigation (CRISC)</h3>
+          <p class="text-gray-400 text-sm">Design effective preventive, detective, and corrective controls for enterprise risk reduction.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Control Design Principles</h4><p class="text-gray-400 text-sm">Control objective alignment · Preventive vs detective controls · Segregation of duties · Control feasibility analysis</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Implementation Patterns</h4><p class="text-gray-400 text-sm">Technical and procedural controls · Compensating controls · Automation opportunities · Integration with operations</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Control Effectiveness</h4><p class="text-gray-400 text-sm">Control maturity assessment · Testing and validation · Exception management · Continuous improvement cycles</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 5 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-purple-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 5: Security Program Management (CISM)</h3>
+          <p class="text-gray-400 text-sm">Build and run scalable security programs aligned with business strategy.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Program Strategy</h4><p class="text-gray-400 text-sm">Security program chartering · Roadmap and investment planning · Capability maturity planning · Stakeholder alignment</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Operations Integration</h4><p class="text-gray-400 text-sm">SOC and audit coordination · Business unit engagement · Service management alignment · Third-party governance</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Performance Management</h4><p class="text-gray-400 text-sm">Program metrics framework · Executive communication model · Issue tracking and closure · Value realization tracking</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 6 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-orange-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 6: Incident Management and Response Governance (CISM)</h3>
+          <p class="text-gray-400 text-sm">Incident governance, escalation models, and post-incident compliance actions.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Incident Governance</h4><p class="text-gray-400 text-sm">Incident classification models · Escalation policy design · Decision authority mapping · Regulatory response timelines</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Response Workflows</h4><p class="text-gray-400 text-sm">Cross-team response process · Evidence retention standards · Communication playbooks · Containment governance</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Post-Incident Controls</h4><p class="text-gray-400 text-sm">Root cause governance reviews · Control remediation plans · Audit-ready documentation · Lessons learned integration</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 7 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-teal-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 7: ISO 27001 ISMS Foundations and Policy Architecture</h3>
+          <p class="text-gray-400 text-sm">Build ISMS scope, policy structure, and control governance aligned to ISO 27001 requirements.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">ISMS Scope and Context</h4><p class="text-gray-400 text-sm">Scope definition methods · Interested parties analysis · Context and boundaries · Statement of applicability basics</p></div>
+          <div><h4 class="text-pink-400 font-semibold">ISO Policy Stack</h4><p class="text-gray-400 text-sm">Mandatory policy set · Control procedure mapping · Document governance model · Version control and approvals</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Control Domains</h4><p class="text-gray-400 text-sm">Annex A structure overview · Control objective mapping · Ownership and operation · Evidence expectations</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 8 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 8: ISO 27001 Lead Audit Execution</h3>
+          <p class="text-gray-400 text-sm">Plan and execute compliance audits, handle non-conformities, and close corrective actions.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Audit Planning</h4><p class="text-gray-400 text-sm">Audit plans and schedules · Checklist creation · Sampling strategy · Team assignment and logistics</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Audit Fieldwork</h4><p class="text-gray-400 text-sm">Interview techniques · Control verification methods · Evidence adequacy testing · Finding classification</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Corrective Actions</h4><p class="text-gray-400 text-sm">Root-cause validation · Action plan quality checks · Closure evidence review · Continuous compliance readiness</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 9 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-cyan-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 9: CISSP Governance, Risk, and Compliance Depth</h3>
+          <p class="text-gray-400 text-sm">Advanced governance and architecture thinking for senior security roles.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Security Governance Design</h4><p class="text-gray-400 text-sm">Governance operating models · Security architecture governance · Risk-aligned decision making · Leadership communication</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Compliance Architecture</h4><p class="text-gray-400 text-sm">Multi-framework mapping · Control harmonization · Audit evidence architecture · Regulatory change handling</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Enterprise Security Strategy</h4><p class="text-gray-400 text-sm">Long-term roadmap planning · Program prioritization · Resource and budget alignment · Executive risk briefings</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 10 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-pink-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 10: Career and Certification Strategy Workshop</h3>
+          <p class="text-gray-400 text-sm">Build your personalized exam and role transition plan across CISA, CISM, CRISC, ISO 27001, and CISSP.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Certification Sequencing</h4><p class="text-gray-400 text-sm">Role-based certification order · Study planning templates · Prerequisite gap mapping · Time-to-certification strategy</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Portfolio and Resume Alignment</h4><p class="text-gray-400 text-sm">Audit evidence portfolio · Governance project storytelling · Risk-case interview preparation · Leadership role positioning</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Capstone Audit Simulation</h4><p class="text-gray-400 text-sm">End-to-end audit scenario · Risk and control recommendations · Executive report submission · Mentor review and roadmap</p></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-14 text-center">
+        <div class="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-[0.2em] mb-6">
+          Security Audit & Governance
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+          Ready to Master Security Audit and Governance?
+        </h2>
+
+        <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          Join this comprehensive track to build practical audit, compliance, and security management expertise.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../contact.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold uppercase tracking-wide hover:bg-cyan-500/20 transition">
+            Enroll Now
+          </a>
+          <a href="../programs.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-bold uppercase tracking-wide hover:bg-pink-500/20 transition">
+            Explore Category Paths
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE CONTENT END ========== -->
+
+    <!-- Footer Section (exactly same as original) -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Contact -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com<br>
+          +91 8383854378<br>
+          Bengaluru, Karnataka, India
+        </p>
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

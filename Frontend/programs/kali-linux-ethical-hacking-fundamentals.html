@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Linux Ethical Hacking Fundamentals | Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+     
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="../contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header><!-- ========== PAGE CONTENT START ========== -->
+
+<!-- Hero Section -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- Heading -->
+    <div class="max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-500 bg-clip-text text-transparent">
+          Kali Linux Ethical Hacking Fundamentals
+        </span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl">
+        Learn ethical hacking fundamentals with Kali Linux through a structured 12-module track. Build practical skills in Linux operations, network scanning, vulnerability assessment, password attacks, wireless testing, basic exploitation, and professional reporting.
+      </p>
+    </div>
+
+    <!-- Quick Action Buttons -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="contact.html" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-bold hover:scale-105 transition">Enroll Now</a>
+      <a href="contact.html" class="px-6 py-3 border border-cyan-400/50 rounded-lg font-bold hover:bg-cyan-500/10 transition">View Schedule</a>
+      <a href="contact.html" class="px-6 py-3 border border-pink-500/50 rounded-lg font-bold hover:bg-pink-500/10 transition">Contact Sales</a>
+    </div>
+
+    <!-- Badges Row -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-sm">✓ Kali Lab Setup</span>
+      <span class="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm">✓ Tool-Based Practice</span>
+      <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm">✓ Ethical and Legal Focus</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Cards -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-cyan-400 mb-2">12</div>
+        <div class="text-gray-300">Practical Modules</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-pink-400 mb-2">Labs</div>
+        <div class="text-gray-300">Hands-On Labs</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-blue-400 mb-2">Foundation</div>
+        <div class="text-gray-300">Job-Oriented Foundation</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-green-400 mb-2">Ethics</div>
+        <div class="text-gray-300">Ethical and Legal Focus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Course Essentials & Who Should Attend -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Course Essentials</h2>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Ethical hacking and cybersecurity foundation</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Kali Linux setup on VMware, VirtualBox, and USB</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Linux command-line and networking basics</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Scanning and vulnerability assessment workflows</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Password and wireless security testing introduction</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Basic exploitation and reporting best practices</li>
+        </ul>
+      </div>
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Who Should Attend</h2>
+        <p class="text-gray-300 leading-relaxed">Beginners in ethical hacking, Linux learners, SOC starters, and cybersecurity professionals looking for practical Kali Linux foundations.</p>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">System Requirements</h3>
+          <p class="text-gray-300">RAM 4-8 GB, CPU 2 cores, disk 40-50 GB. Supports VMware, VirtualBox, and Live USB methods.</p>
+        </div>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">Lab Approach</h3>
+          <p class="text-gray-300">Every major module includes guided lab tasks including setup, scanning, assessment, and reporting exercises.</p>
+        </div>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">Ethics and Legal Scope</h3>
+          <p class="text-gray-300">Program is designed only for authorized testing environments with strict legal and ethical hacking guidelines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 Modules -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Course Modules</h2>
+    <div class="space-y-6">
+      
+      <!-- Module 1 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-cyan-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-cyan-400">Module 1: Introduction to Kali Linux</h3>
+          <p class="text-gray-400 mt-1">What is Kali Linux, ethical hacking basics, cybersecurity concepts, and Kali Linux features vs other distributions.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Core Concepts</h4><p class="text-gray-400 text-sm">What is Kali Linux • Ethical hacking fundamentals • Cybersecurity basics • Kali Linux feature overview</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Distribution Context</h4><p class="text-gray-400 text-sm">Kali vs other Linux distributions • Use cases for penetration testing • Role in security operations • Tool ecosystem overview</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Compliance and Ethics</h4><p class="text-gray-400 text-sm">Penetration testing basics • Legal considerations in hacking • Authorized scope boundaries • Responsible disclosure basics</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 2 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-pink-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-pink-400">Module 2: Installation of Kali Linux</h3>
+          <p class="text-gray-400 mt-1">Set up Kali Linux using VMware, VirtualBox, and Live USB with recommended hardware requirements.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Installation Methods</h4><p class="text-gray-400 text-sm">VMware installation • VirtualBox installation • Live USB installation • Boot and setup verification</p></div>
+          <div><h4 class="font-semibold text-white mb-2">System Requirements</h4><p class="text-gray-400 text-sm">RAM: 4-8 GB • CPU: 2 cores • Disk: 40-50 GB • Resource allocation best practices</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Install Kali Linux on VMware • Update repositories post-install • Create snapshot and backup • Validate network access</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 3 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-blue-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-blue-400">Module 3: Kali Linux Interface</h3>
+          <p class="text-gray-400 mt-1">Desktop environment, file system structure, menu categories, and package management workflows.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Interface and Navigation</h4><p class="text-gray-400 text-sm">Desktop environment walkthrough • Kali menu categories • Terminal workflow basics • System settings review</p></div>
+          <div><h4 class="font-semibold text-white mb-2">File System and Packages</h4><p class="text-gray-400 text-sm">Linux file system structure • Package management basics • Tool organization understanding • Workspace setup tips</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Operations Tasks</h4><p class="text-gray-400 text-sm">Updating Kali Linux • Installing tools • Repository health checks • Version and dependency checks</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 4 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-green-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-green-400">Module 4: Basic Linux Commands</h3>
+          <p class="text-gray-400 mt-1">Command-line essentials for system operations in security testing environments.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Navigation Commands</h4><p class="text-gray-400 text-sm">ls, pwd, cd • mkdir, rm • cp, mv • Directory and file workflows</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Permissions and Processes</h4><p class="text-gray-400 text-sm">chmod fundamentals • ps and top usage • Process visibility and control • Privilege awareness</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Practice command-line operations • Create and manage files • Modify permissions safely • Monitor running processes</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 5 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-purple-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-purple-400">Module 5: Networking Basics</h3>
+          <p class="text-gray-400 mt-1">IP concepts, interfaces, DNS, routing, and network diagnostic commands.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Networking Concepts</h4><p class="text-gray-400 text-sm">IP address concepts • Network interfaces • DNS and routing basics • Connectivity models</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Commands</h4><p class="text-gray-400 text-sm">ifconfig and ip • ping • netstat • traceroute</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Check network connectivity • Inspect interface configuration • Validate DNS and routes • Document diagnostics output</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 6 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-orange-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-orange-400">Module 6: Network Scanning</h3>
+          <p class="text-gray-400 mt-1">Use Nmap for host discovery, port scanning, and service detection.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Nmap Fundamentals</h4><p class="text-gray-400 text-sm">Nmap workflow basics • Target scoping rules • Safe scan planning • Output interpretation</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Scanning Topics</h4><p class="text-gray-400 text-sm">Host discovery • Port scanning • Service detection • Result classification</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Scan network devices • Identify active hosts • List open ports and services • Create baseline scan report</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 7 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-teal-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-teal-400">Module 7: Vulnerability Assessment</h3>
+          <p class="text-gray-400 mt-1">Identify security weaknesses using scanning and analysis tools.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Assessment Basics</h4><p class="text-gray-400 text-sm">Vulnerability scanning concepts • Weakness identification process • Risk severity understanding • False-positive awareness</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Tools</h4><p class="text-gray-400 text-sm">Nikto for web checks • OpenVAS fundamentals • Scan scope and tuning • Finding triage process</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Run vulnerability scans • Review and classify findings • Validate critical issues • Prepare remediation notes</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 8 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-red-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-red-400">Module 8: Password Attacks</h3>
+          <p class="text-gray-400 mt-1">Understand password cracking concepts and controlled testing methods.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Attack Concepts</h4><p class="text-gray-400 text-sm">Password cracking basics • Dictionary attacks • Brute-force attacks • Password policy implications</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Tools</h4><p class="text-gray-400 text-sm">John the Ripper basics • Hydra introduction • Wordlist strategy • Rate and lockout awareness</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Run controlled password tests • Measure crack attempt behavior • Evaluate weak credential impact • Recommend secure controls</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 9 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-indigo-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-indigo-400">Module 9: Wireless Security Testing</h3>
+          <p class="text-gray-400 mt-1">Wi-Fi security basics, WPA/WPA2 concepts, and wireless analysis methods.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Wireless Security Concepts</h4><p class="text-gray-400 text-sm">Wi-Fi security basics • WPA/WPA2 overview • Attack surface understanding • Defensive configuration baseline</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Tooling</h4><p class="text-gray-400 text-sm">Aircrack-ng basics • Capture and analysis workflow • Handshake awareness • Legal testing boundaries</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Wireless network analysis • Inspect encryption posture • Identify weak setup patterns • Document hardening actions</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 10 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-yellow-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-yellow-400">Module 10: Introduction to Exploitation</h3>
+          <p class="text-gray-400 mt-1">Exploitation concepts, payload basics, and Metasploit framework introduction.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Exploitation Foundations</h4><p class="text-gray-400 text-sm">Exploitation concepts • Payload basics • Attack chain understanding • Risk and impact mapping</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Metasploit Basics</h4><p class="text-gray-400 text-sm">Framework structure • Module categories • Safe test environment setup • Result logging fundamentals</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Lab Task</h4><p class="text-gray-400 text-sm">Basic exploitation demo • Controlled environment testing • Capture proof-of-concept output • Map mitigation recommendations</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 11 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-cyan-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-cyan-400">Module 11: Reporting and Documentation</h3>
+          <p class="text-gray-400 mt-1">Create professional penetration testing and vulnerability documentation.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Security Reports</h4><p class="text-gray-400 text-sm">Security testing report structure • Finding severity and evidence • Business risk articulation • Executive summary writing</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Documentation Standards</h4><p class="text-gray-400 text-sm">Vulnerability documentation • Reproducibility criteria • Screenshot and log handling • Remediation tracking</p></div>
+          <div><h4 class="font-semibold text-white mb-2">PenTest Format</h4><p class="text-gray-400 text-sm">Basic penetration test template • Scope and assumptions • Methodology and tools used • Closure and sign-off notes</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 12 -->
+      <div class="bg-[#111827] rounded-2xl overflow-hidden border border-white/5">
+        <div class="p-6 bg-gradient-to-r from-pink-500/10 to-transparent">
+          <h3 class="text-xl font-bold text-pink-400">Module 12: Basic Ethical Hacking Lab</h3>
+          <p class="text-gray-400 mt-1">Integrated hands-on lab covering setup, scanning, vulnerability checks, and password testing.</p>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-6">
+          <div><h4 class="font-semibold text-white mb-2">Setup and Discovery</h4><p class="text-gray-400 text-sm">Install Kali Linux • Configure test environment • Scan network using Nmap • Identify open ports</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Assessment Workflow</h4><p class="text-gray-400 text-sm">Perform vulnerability scan • Validate high-priority findings • Assess exposure impact • Plan remediation order</p></div>
+          <div><h4 class="font-semibold text-white mb-2">Credential and Report Lab</h4><p class="text-gray-400 text-sm">Test password cracking workflow • Record lab evidence • Draft concise assessment report • Present final recommendations</p></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-14 text-center">
+        <div class="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-[0.2em] mb-6">
+          Kali Linux Training
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+          Ready to Start Ethical Hacking with Kali Linux?
+        </h2>
+
+        <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          Join this hands-on 12-module track and build a strong practical foundation for cybersecurity careers.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../contact.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold uppercase tracking-wide hover:bg-cyan-500/20 transition">
+            Enroll Now
+          </a>
+          <a href="../programs.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-bold uppercase tracking-wide hover:bg-pink-500/20 transition">
+            Explore Category Paths
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE CONTENT END ========== -->
+
+    <!-- Footer Section -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Download App -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com</br>
+          +91 8383854378</br>
+          Bengaluru, Karnataka, India
+        </p>
+        
+      
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

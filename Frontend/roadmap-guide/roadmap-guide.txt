@@ -1,0 +1,29 @@
+TechMentor Pro - Role-Based IT Career Roadmap
+Version: March 2026
+
+1) AWS Cloud Architect Track
+- Fundamentals: Cloud concepts, IAM, networking, storage
+- Core Build: EC2, VPC, RDS, ELB, Auto Scaling
+- Advanced: Multi-account architecture, security baseline, Well-Architected review
+- Outcome: AWS Solutions Architect role readiness + interview preparation
+
+2) Azure Administrator Track
+- Fundamentals: Azure basics, Entra ID, subscriptions, governance
+- Core Build: Virtual networks, VMs, storage, backup, monitoring
+- Advanced: Policy, RBAC, cost optimization, hybrid integration
+- Outcome: AZ-104 readiness + enterprise admin skill set
+
+3) DevOps Engineer Track
+- Fundamentals: Linux, Git, scripting, CI/CD basics
+- Core Build: Docker, Kubernetes, Terraform, pipeline automation
+- Advanced: Observability, reliability engineering, production release strategy
+- Outcome: DevOps interview readiness and project portfolio
+
+Recommended Execution Plan
+- Week 1-2: Foundation and baseline assessments
+- Week 3-6: Hands-on guided labs
+- Week 7-9: Project implementation and review
+- Week 10-12: Interview preparation and certification support
+
+Need help choosing a track?
+Contact: info@strikava.com | +91 8383854378

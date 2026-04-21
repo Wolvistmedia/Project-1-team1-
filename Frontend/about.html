@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us |  Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+    
+<!-- Navbar -->
+    <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header>
+
+    
+<!------------heading section-->
+<section class="bg-[#0b1120] py-8 relative overflow-hidden">
+  <!-- Background ambient glows -->
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="text-left mb-12">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">Built for Professionals Who Need 
+            Real Technical Depth</span>
+      </h2>
+      <p class="text-gray-300 text-left md:text-lg max-w-2xl leading-relaxed">
+        TechMentor Pro was built around a simple idea: technical training should create real implementation 
+        confidence, not just course completion. Our programs combine mentor-led delivery, hands-on practice, 
+        and role-aligned learning plans so professionals and teams can grow with clarity.
+      </p>
+    </div>
+
+    <div class="flex gap-4">
+    <a href="contact.html"
+        class="quote-btn hidden md:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-7 py-4 rounded-md font-bold uppercase tracking-wide text-sm hover:scale-105 transition duration-300">
+        Talk to Advisor
+      </a>
+      <a href="programs.html"
+        class="quote-btn hidden md:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-7 py-4 rounded-md font-bold uppercase tracking-wide text-sm hover:scale-105 transition duration-300">
+        Explore Programs
+      </a>
+</div>
+
+<!-- tag section -->
+        <div class="flex  gap-3  mt-8 mb-8">
+          <span class="px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium">
+            Overview
+          </span>
+          <span class="px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-medium">
+            Our Story
+          </span>
+          <span class="px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium">
+            Core Values
+          </span>
+          <span class="px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-medium">
+            How We Work
+          </span>
+          <span class="px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium">
+            Who We Serve
+          </span>
+        </div>
+      </div>
+</section>
+
+
+<!--------top cards---------->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- subtle glows -->
+  <div class="absolute top-10 left-20 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 right-20 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-[1180px] mx-auto px-6 md:px-10 relative z-10">
+
+    <!-- Service Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 items-stretch">
+
+      <!-- Card 1 -->
+      <div class="group">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6 h-full flex flex-col">
+          <h3 class="text-white text-3xl font-extrabold mb-4">What Defines Our Approach</h3>
+          
+        <!-- Bullet points -->
+        <div class="space-y-4 mb-10">
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_12px_#22d3ee]"></div>
+            <p class="text-gray-200 font-medium">Role-based learning paths instead of generic course flow</p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_12px_#22d3ee]"></div>
+            <p class="text-gray-200 font-medium">Hands-on labs and applied implementation practice</p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_12px_#22d3ee]"></div>
+            <p class="text-gray-200 font-medium">Mentor guidance focused on real execution challenges</p>
+          </div>
+
+            <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_12px_#22d3ee]"></div>
+            <p class="text-gray-200 font-medium">Support for certification, interviews, and business outcomes</p>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </section>
+
+
+
+<!-- question Section -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- Background ambient glows -->
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+
+
+    <!--  Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <h3 class="text-xl font-bold text-white mb-3">Practical</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Implementation-first learning model
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <h3 class="text-xl font-bold text-white mb-3">Role-Aligned</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Tracks mapped to real job outcomes
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 - -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <h3 class="text-xl font-bold text-white mb-3">Flexible</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Built for individuals and teams
+          </p>
+        </div>
+      </div>
+</div>
+</div>
+</section>
+
+
+ <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Training Designed Around Capability, Not Just Content</h2>
+      <p class="text-grey-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">We focus on helping learners and delivery 
+        teams build confidence in the work they are expected to perform. That means the learning model must connect skills, tools, 
+        projects, and outcomes in a practical way.
+
+        Whether the requirement is an individual role transition or a corporate upskilling initiative, our approach is built around measurable 
+         progress, strong mentor support, and implementation-focused learning.</p>
+    </div>
+
+
+ <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Why We Chose a Practical Learning Model</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto rounded-full"></div>
+      <p class="text-grey-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Many professionals 
+        struggle not because they lack ambition, but because training often stays too theoretical. TechMentor 
+        Pro was built to close that gap between learning and real execution.</p>
+    </div>
+
+    
+      <section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- subtle glows -->
+  <div class="absolute top-10 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-[1180px] mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- category Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Recognizing the Gap</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            We saw that many learners could complete courses and collect certificates, 
+            but still lacked the clarity and confidence required in technical interviews or live projects.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Building a Better Format</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            That led us to shape a delivery model around role expectations, practical 
+            exercises, mentor feedback, and training journeys that feel closer to real work.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-94 bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Expanding With Purpose</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            As learner needs evolved, we expanded across cloud, DevOps, cybersecurity, and corporate 
+            capability programs while keeping the same practical-first mindset.
+          </p>
+        </div>
+        </div>
+      </div>
+</div>
+</div>
+      </section>
+
+
+ <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">What We Optimize For</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto rounded-full"></div>
+      <p class="text-grey-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Our operating principles
+         influence how we design curriculum, select mentors, support learners, and structure outcomes.</p>
+    </div>
+
+    
+      <section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- subtle glows -->
+  <div class="absolute top-10 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-[1180px] mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- category Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Clarity</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            We simplify complex role paths so learners know what to focus on, what to build, and what matters most for progress.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Depth</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Training should go beyond surface-level explanation. We emphasize understanding 
+            that holds up in projects, reviews, and interviews.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-94 bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Relevance</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Our learning tracks stay aligned with actual work environments, tools, and decision-making contexts across modern IT roles.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      
+      <!-- Card 4 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-94 bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Support</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            People learn faster when they are guided well. Mentor access, review loops, and 
+            structured checkpoints are part of the model by design.
+          </p>
+        </div>
+        </div>
+      </div>
+</div>
+</div>
+      </section>
+
+      
+ <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">A Consistent Operating Model Behind Every Program</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto rounded-full"></div>
+      <p class="text-grey-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Every engagement follows the same high-discipline 
+        learning logic: understand the goal, map the gap, deliver with depth, and measure practical readiness.</p>
+    </div>
+
+    
+      <section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- subtle glows -->
+  <div class="absolute top-10 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-[1180px] mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- category Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Assess</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+           Baseline evaluation of current skills, role maturity, and capability gaps.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Design</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Custom learning path, project path, and delivery sequence aligned to the outcome.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-94 bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Deliver</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Mentor-led learning with labs, guided practice, and implementation-oriented discussion.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-94 bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Validate</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Progress review through assessments, checkpoints, and interview or project-readiness indicators.
+          </p>
+        </div>
+        </div>
+      </div>
+</div>
+</div>
+      </section>
+
+      
+ <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Built for Learners, Working Professionals, 
+        and Enterprise Teams</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto rounded-full"></div>
+      <p class="text-grey-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Our programs support different 
+        types of growth journeys, from individual transitions to structured team capability development.</p>
+    </div>
+
+    
+      <section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- subtle glows -->
+  <div class="absolute top-10 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-[1180px] mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- category Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Individual Learners</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Professionals building stronger foundations in cloud, DevOps, security, and modern infrastructure roles.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-full bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Career Transition Candidates</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Learners preparing for a role change who need a roadmap, projects, and interview-focused guidance.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-94 bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Corporate Teams</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Organizations looking for structured upskilling, practical delivery models, and measurable team progress.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      
+      <!-- Card 4 -->
+      <div class="group h-full">
+        <div class="rounded-[26px] overflow-hidden h-94 bg-[#111827] border border-white/5 shadow-[0_0_30px_rgba(0,255,255,0.04)]">
+          
+        <div class="p-6">
+          <h3 class="text-white text-3xl font-extrabold mb-4">Technology Functions</h3>
+          <p class="text-gray-300 text-lg leading-8 mb-5">
+            Cloud, platform, DevOps, SRE, SOC, support, and engineering teams preparing for higher delivery maturity.
+          </p>
+        </div>
+        </div>
+      </div>
+</div>
+</div>
+      </section>
+
+
+      
+<!-----------question ask card -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- Background ambient glows -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    
+    <!-- Main Card -->
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <!-- Top neon line -->
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      
+      <!-- Inner glow -->
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-12 text-center">
+        
+
+        <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-8">
+          Need a Trusted Upskilling Partner?
+        </h2>
+
+          <!-- Bullet points -->
+          
+            <p class="text-gray-200 font-medium">Connect with us for individual learning guidance, 
+              certification planning, or enterprise team enablement.</p>
+          </div>
+ <!-- button section -->
+        <div class="flex justify-center gap-3 mb-8 relative z-20">
+          <a href="contact.html" class="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium">
+            Talk to Advisor
+          </a>
+          <a href="corporate-training.html" class=" inline-block px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-medium">
+            Corporate Solutions
+          </a>
+        </div>
+        </div>
+        </div>
+</section>
+
+
+ <!-- Footer Section -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Download App -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com</br>
+          +91 8383854378</br>
+          Bengaluru, Karnataka, India
+        </p>
+        
+      
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

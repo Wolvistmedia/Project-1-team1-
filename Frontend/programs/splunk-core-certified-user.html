@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splunk Core Certified User | Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+        
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="../contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="../faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="../why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="../categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="../categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="../categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="../categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="../categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="../categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="../categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="../programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="../contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="../categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="../success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="../contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header>
+<!-- ========== PAGE CONTENT START ========== -->
+
+<!-- Hero Section -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+
+    <!-- Heading -->
+    <div class="max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-500 bg-clip-text text-transparent">
+          Splunk Core Certified User
+        </span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl">
+        Build a strong foundation of Splunk platform fundamentals. Master searching, fields, look-ups, alerts, reports, and dashboards on Enterprise or Cloud. Ideal starting point for any Splunk career.
+      </p>
+    </div>
+
+    <!-- Quick Action Buttons -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="../contact.html" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-bold hover:scale-105 transition">Request Quote</a>
+      <a href="../contact.html" class="px-6 py-3 border border-cyan-400/50 rounded-lg font-bold hover:bg-cyan-500/10 transition">Download Roadmap</a>
+      <a href="../contact.html" class="px-6 py-3 border border-pink-500/50 rounded-lg font-bold hover:bg-pink-500/10 transition">Talk to Advisor</a>
+    </div>
+
+    <!-- Badges Row -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-sm">✓ Exam: SPLK-1001</span>
+      <span class="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm">✓ Level: Entry/Beginner</span>
+      <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm">✓ Duration: 4-8 Weeks</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Cards -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-cyan-400 mb-2">Exam-Focused</div>
+        <div class="text-gray-300">Training</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-pink-400 mb-2">Hands-on</div>
+        <div class="text-gray-300">Labs</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-blue-400 mb-2">Success</div>
+        <div class="text-gray-300">Guarantee</div>
+      </div>
+      <div class="text-center p-6 bg-[#111827]/50 rounded-2xl border border-white/5">
+        <div class="text-4xl font-bold text-green-400 mb-2">4-8</div>
+        <div class="text-gray-300">Weeks Duration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program Overview + Who Should Attend -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Program Overview</h2>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Comprehensive Splunk fundamentals training</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Hands-on labs with real Splunk instances</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Works with Enterprise and Cloud platforms</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Exam SPLK-1001 preparation included</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Reporting, dashboards, and alerting mastery</li>
+          <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">▹</span> Guided practical exercises and projects</li>
+        </ul>
+      </div>
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Who Should Attend</h2>
+        <p class="text-gray-300 leading-relaxed">IT professionals, data analysts, junior security analysts, system administrators, or anyone seeking to start a Splunk career in data analysis, monitoring, or security operations.</p>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">Prerequisites</h3>
+          <p class="text-gray-300">Basic IT knowledge helpful but not required. Comfortable with command-line and data concepts. No prior Splunk experience needed.</p>
+        </div>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <h3 class="text-lg font-semibold text-white mb-3">What You Get</h3>
+          <p class="text-gray-300">Comprehensive course materials, hands-on lab access, practice exams, study guides, instructor support, and exam success tracking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Course Curriculum (8 weeks in 4 modules) -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Course Curriculum</h2>
+    <p class="text-center text-gray-400 mb-12">8-week comprehensive training covering all Splunk Core Certified User exam objectives.</p>
+    
+    <div class="space-y-8">
+      
+      <!-- Module 1-2 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-cyan-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 1-2: Splunk Fundamentals (Weeks 1-2)</h3>
+          <p class="text-gray-400 text-sm">Introduction to the Splunk platform architecture, navigation, and basic concepts.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Splunk Platform Architecture</h4><p class="text-gray-400 text-sm">Indexer, search head, forwarder components · Enterprise vs. Cloud models · Data flow and indexing pipeline · Parsing and field extraction</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Navigation & Interface</h4><p class="text-gray-400 text-sm">Splunk UI and home page · Menu system · Search bar and language intro · Customizing your interface</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Data Onboarding Basics</h4><p class="text-gray-400 text-sm">Data input methods (files, ports, scripts) · Source configuration · Sourcetype and host assignment · Index organization</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 3-4 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-pink-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 3-4: Search Processing Language (SPL) (Weeks 3-4)</h3>
+          <p class="text-gray-400 text-sm">Master search syntax, operators, commands, and search fundamentals.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">SPL Basics & Syntax</h4><p class="text-gray-400 text-sm">Search syntax and structure · Field-value pairs · Boolean logic (AND, OR, NOT) · Comparison operators and wildcards</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Search Commands & Operators</h4><p class="text-gray-400 text-sm">Pipe operator and command chaining · Search modifiers (earliest, latest) · Statistical commands · Filtering and transformation</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Fields & Extraction</h4><p class="text-gray-400 text-sm">Default and custom fields · Field extraction techniques · Field aliases and renaming · Calculated fields introduction</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 5 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 5: Reports & Dashboards (Week 5)</h3>
+          <p class="text-gray-400 text-sm">Create professional reports and interactive dashboards.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Report Creation</h4><p class="text-gray-400 text-sm">Report builder and saved searches · Report types and visualizations · Table, chart, single value reports · Formatting and saving</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Dashboard Design</h4><p class="text-gray-400 text-sm">Dashboard editor and panels · Adding panels from reports · Layout and organization · Interactive dashboard elements</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Visualizations</h4><p class="text-gray-400 text-sm">Chart types and best practices · Pie, bar, line graphs · Heatmaps and bubble charts · Color schemes and formatting</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 6 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-green-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 6: Alerts & Monitoring (Week 6)</h3>
+          <p class="text-gray-400 text-sm">Set up alerts and notifications for your searches.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Alert Creation</h4><p class="text-gray-400 text-sm">Creating alerts from searches · Scheduling and triggers · Alert types and actions · Webhook and script actions</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Alert Conditions</h4><p class="text-gray-400 text-sm">Threshold and pattern detection · Trigger conditions and logic · Suppression and throttling · Alert severity levels</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Notifications</h4><p class="text-gray-400 text-sm">Email notifications · Webhook integrations · Slack and Teams integration · Alert correlation and grouping</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 7 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-purple-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 7: Look-ups & Knowledge Objects (Week 7)</h3>
+          <p class="text-gray-400 text-sm">Enrich data with look-ups and manage knowledge objects.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Look-up Basics</h4><p class="text-gray-400 text-sm">Look-up files (KV stores) · CSV creation and usage · Table editor · Updating and maintaining look-ups</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Joins & Enrichment</h4><p class="text-gray-400 text-sm">Join command and syntax · Lookup command for enrichment · Input/output lookup · Default behavior</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Knowledge Objects</h4><p class="text-gray-400 text-sm">Event types and tags · Field aliases and calculated fields · Workflow actions · Sharing knowledge objects</p></div>
+        </div>
+      </div>
+      
+      <!-- Module 8 -->
+      <div class="bg-[#111827] rounded-2xl border border-white/5 overflow-hidden">
+        <div class="bg-gradient-to-r from-orange-500/20 to-transparent px-6 py-4">
+          <h3 class="text-xl font-bold text-white">Module 8: Exam Prep & Review (Week 8)</h3>
+          <p class="text-gray-400 text-sm">Comprehensive exam preparation and final review.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 p-6">
+          <div><h4 class="text-cyan-400 font-semibold">Exam Skills Review</h4><p class="text-gray-400 text-sm">Exam format and question types · Time management strategies · Common scenarios · Practice with past exam patterns</p></div>
+          <div><h4 class="text-pink-400 font-semibold">Practice Exams</h4><p class="text-gray-400 text-sm">Full-length practice tests · Timed exam simulations · Answer reviews and explanations · Performance analytics</p></div>
+          <div><h4 class="text-blue-400 font-semibold">Final Preparation</h4><p class="text-gray-400 text-sm">Key concepts review · Q&A review session · Exam day best practices · Troubleshooting common mistakes</p></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Hands-on Labs & Projects -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="bg-gradient-to-r from-cyan-500/5 to-pink-500/5 rounded-2xl p-8 md:p-10 border border-white/10">
+      <h2 class="text-3xl font-bold text-white mb-6 text-center">Hands-on Labs & Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-[#111827]/50 p-5 rounded-xl">
+          <h3 class="text-cyan-400 font-bold text-lg">Live Splunk Sandbox</h3>
+          <p class="text-gray-300 text-sm">Access to a fully configured Splunk instance for all exercises and experiments throughout the course.</p>
+        </div>
+        <div class="bg-[#111827]/50 p-5 rounded-xl">
+          <h3 class="text-pink-400 font-bold text-lg">Guided Lab Exercises</h3>
+          <p class="text-gray-300 text-sm">Step-by-step labs covering searches, reports, dashboards, alerts, and look-ups with real datasets.</p>
+        </div>
+        <div class="bg-[#111827]/50 p-5 rounded-xl">
+          <h3 class="text-blue-400 font-bold text-lg">Project-Based Learning</h3>
+          <p class="text-gray-300 text-sm">Build complete monitoring solutions: create dashboards for IT ops, set up alerts, and enrich data with look-ups.</p>
+        </div>
+        <div class="bg-[#111827]/50 p-5 rounded-xl">
+          <h3 class="text-green-400 font-bold text-lg">Real-World Scenarios</h3>
+          <p class="text-gray-300 text-sm">Practice with realistic IT monitoring, security log analysis, and operational reporting use cases.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What You Will Learn -->
+<section class="bg-[#0b1120] py-16 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 class="text-3xl font-bold text-white text-center mb-8">What You Will Learn</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#111827] p-6 rounded-xl border border-white/5">
+        <h3 class="text-cyan-400 font-bold text-xl mb-3">Splunk Search Fundamentals</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>• SPL syntax and search commands</li>
+          <li>• Field extraction and enrichment</li>
+          <li>• Search optimization techniques</li>
+          <li>• Data filtering and transformation</li>
+        </ul>
+      </div>
+      <div class="bg-[#111827] p-6 rounded-xl border border-white/5">
+        <h3 class="text-pink-400 font-bold text-xl mb-3">Reporting & Visualization</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>• Create professional reports</li>
+          <li>• Build interactive dashboards</li>
+          <li>• Data visualization best practices</li>
+          <li>• Chart types and formatting</li>
+        </ul>
+      </div>
+      <div class="bg-[#111827] p-6 rounded-xl border border-white/5">
+        <h3 class="text-blue-400 font-bold text-xl mb-3">Monitoring & Alerts</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>• Alert setup and scheduling</li>
+          <li>• Notification configuration</li>
+          <li>• Threshold-based monitoring</li>
+          <li>• Integration with external systems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Training Format & Schedule + FAQ -->
+<section class="bg-[#0b1120] py-20 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-12 mb-12">
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Training Format & Schedule</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-cyan-400 font-semibold">Expert Instruction</h3>
+            <p class="text-gray-300 text-sm">Learn from certified Splunk professionals with real-world deployment experience and consulting background.</p>
+          </div>
+          <div>
+            <h3 class="text-pink-400 font-semibold">Flexible Learning</h3>
+            <p class="text-gray-300 text-sm">Choose live instructor-led, on-demand recorded, or self-paced format based on your schedule.</p>
+          </div>
+          <div>
+            <h3 class="text-blue-400 font-semibold">Exam Success Guarantee</h3>
+            <p class="text-gray-300 text-sm">If you don't pass SPLK-1001, we retrain you free until you succeed.</p>
+          </div>
+          <div>
+            <h3 class="text-green-400 font-semibold">Lifetime Lab Access</h3>
+            <p class="text-gray-300 text-sm">Retain access to all materials and practice labs even after course completion.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#111827] rounded-2xl p-8 border border-white/5">
+        <h2 class="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <div><p class="text-cyan-400 font-semibold">Do I need Splunk experience before starting?</p><p class="text-gray-300 text-sm">No, this is an entry-level certification designed for beginners with no prior Splunk experience.</p></div>
+          <div><p class="text-pink-400 font-semibold">How long is the training program?</p><p class="text-gray-300 text-sm">4-8 weeks depending on the format you choose (live, on-demand, or self-paced).</p></div>
+          <div><p class="text-blue-400 font-semibold">Is this certification valuable?</p><p class="text-gray-300 text-sm">Yes, Splunk Core Certified User is the foundation for all Splunk roles and highly valued by employers.</p></div>
+          <div><p class="text-green-400 font-semibold">What's the pass rate for the exam?</p><p class="text-gray-300 text-sm">Our students achieve a high pass rate with dedicated exam prep and practice tests.</p></div>
+          <div><p class="text-purple-400 font-semibold">Can I use Splunk Cloud or only Enterprise?</p><p class="text-gray-300 text-sm">The training covers both Splunk Enterprise and Splunk Cloud platforms.</p></div>
+          <div><p class="text-orange-400 font-semibold">What are the career opportunities after this certification?</p><p class="text-gray-300 text-sm">Junior Splunk Analyst, IT Operations Analyst, Security Operations Center (SOC) Analyst, and Data Analyst roles.</p></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Start Your Journey CTA -->
+    <div class="text-center bg-gradient-to-r from-cyan-500/10 to-pink-500/10 rounded-2xl p-10 border border-white/10">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Become a Splunk Core Certified User?</h2>
+      <p class="text-gray-300 text-lg mb-6">Start your Splunk career with expert training, hands-on labs, and exam success guarantee.</p>
+      <a href="contact.html" class="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl font-bold text-lg hover:scale-105 transition">Enroll Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section (similar to original) -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-14 text-center">
+        <div class="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-[0.2em] mb-6">
+          Splunk Core Certified User
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+          Ready to Start Your Splunk Journey?
+        </h2>
+
+        <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          Get batch schedules, pricing, and a customized learning plan with hands-on labs and exam preparation.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../contact.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold uppercase tracking-wide hover:bg-cyan-500/20 transition">
+            Request Free Consultation
+          </a>
+          <a href="../programs.html"
+            class="inline-block px-7 py-3.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm font-bold uppercase tracking-wide hover:bg-pink-500/20 transition">
+            Explore Category Paths
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE CONTENT END ========== -->
+
+    <!-- Footer Section (exactly same as original) -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Contact -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com<br>
+          +91 8383854378<br>
+          Bengaluru, Karnataka, India
+        </p>
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

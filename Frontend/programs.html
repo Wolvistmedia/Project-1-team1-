@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs |  Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body  class="text-white">
+
+
+<!-- Navbar -->
+   <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+
+</nav>
+    </header>
+    
+<!------------heading section-->
+<section class="bg-[#0b1120] py-3 relative overflow-hidden">
+    
+  <!-- Background ambient glows -->
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="text-left mb-8">
+
+
+
+<!-- Search Bar -->
+    <div class="mt-4 flex justify-center">
+      <div class="relative w-full max-w-md">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <input 
+          type="text" 
+          placeholder="Search courses, programs, or topics..." 
+          class="w-full py-4 pl-12 pr-4 rounded-full bg-[#111827] border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition"
+        />
+        <button class="absolute right-2 top-2 bottom-2 px-6 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-medium text-sm hover:scale-105 transition">
+          Search
+        </button>
+      </div>
+    </div>
+
+  </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">Complete Training Program Catalog</span>
+      </h2>
+      <p class="text-gray-300 text-left md:text-lg max-w-2xl leading-relaxed">
+        Find programs by technology stack, vendor certifications, and job-role 
+        pathways. Use search and category filters to narrow quickly.
+      </p>
+    </div>
+</div>
+</section>
+
+
+ 
+<!-- Course Catalog Section -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- Background ambient glows -->
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+
+
+    <!-- Course Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Ethical Hacking Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Roadmap covering Security+, CEH, PenTest+, and OSCP with practical progression.
+          </p>
+          <a href="programs/ethical-hacking-certification-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">CompTIA Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Complete CompTIA Security+ to SecurityX journey with DoD 8570 compliance and enterprise architecture training.
+          </p>
+          <a href="programs/comptia-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 - -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Master Splunk across core search, administration, security operations, and development roles. 12+ certifications with hands-on SIEM training.
+          </p>
+          <a href="programs/splunk-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 - -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Elastic (ELK) Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Elastic (ELK) certification roadmap covering Engineer, Analyst, Observability Engineer, and SIEM Analyst tracks.
+          </p>
+          <a href="programs/elk-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5 -  -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Elastic SIEM and SOC Operations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Hands-on Elastic SIEM course covering architecture, installation, log ingestion, detections, threat 
+            hunting, incident response, automation, and SOC reporting.
+          </p>
+          <a href="programs/elk-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6 - -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Core Certified User</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Build strong Splunk foundation: searching, fields, look-ups, alerts, reports, and dashboards. Entry-level certification for Enterprise and Cloud.
+          </p>
+          <a href="programs/elastic-siem-operations.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Card 7-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Core Certified Power User</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Master advanced Splunk skills: knowledge objects, data models, field aliases, calculated 
+            fields, macros, and Common Information Model normalization.
+          </p>
+          <a href="programs/splunk-core-certified-user.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 8-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Core Certified Advanced Power User</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Deepen your Splunk expertise with complex search commands, advanced knowledge objects, and best practices 
+            for dashboards and forms to get the most out of your data.
+          </p>
+          <a href="programs/splunk-core-certified-power-user.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 9-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Cloud Certified Admin</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Build competence in managing and configuring Splunk Cloud — data inputs, forwarder configuration, 
+            data management, user accounts, monitoring, and problem isolation.
+          </p>
+          <a href="programs/splunk-core-certified-advanced-power-user.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 10-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Enterprise Certified Admin</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Develop expertise in daily Splunk Enterprise management — license management, indexers, search heads, 
+            configuration, monitoring, and getting data into the Splunk platform.
+          </p>
+          <a href="programs/splunk-enterprise-certified-admin.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 11-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Enterprise Certified Architect</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Gain a thorough understanding of Splunk deployment methodology, planning, data collection, sizing, 
+            and managing distributed deployments with indexer and search head clustering.
+          </p>
+          <a href="programs/splunk-enterprise-certified-architect.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 12-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Core Certified Consultant</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Expand your understanding of Splunk deployment methodology and implementation for large installations, including multi-tier 
+            architecture, clustering, scalability, sizing, and advisory best practices.
+          </p>
+          <a href="programs/splunk-core-certified-consultant.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 13-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Enterprise Security Certified Admin</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Enhance your ability to manage Splunk Enterprise Security with event processing, normalization, deployment planning, 
+            technology add-ons, risk analysis, threat intelligence, and protocol intelligence.
+          </p>
+          <a href="programs/splunk-enterprise-security-certified-admin.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 14-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk SIEM and SOC Operations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive 13-module hands-on training for Splunk SIEM operations covering architecture, data normalization, detection 
+            engineering, risk-based alerting, threat hunting, incident response, and automation.
+          </p>
+          <a href="programs/splunk-siem-operations.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 15 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk IT Service Intelligence</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Grow your knowledge of monitoring mission-critical services with Splunk IT Service Intelligence, including architecture, 
+            deployment planning, service design, notable events, glass tables, and deep dives.
+          </p>
+          <a href="programs/splunk-it-service-intelligence.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 16-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk SOAR Certified Automation Developer</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+           Learn to install, configure, and use Splunk SOAR servers, design and debug playbooks, integrate with Splunk, 
+           and build advanced automation using custom code and REST APIs.
+          </p>
+          <a href="programs/splunk-soar-certified-automation-developer.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 17-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk O11y Cloud Certified Metrics User</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Enhance your Splunk Observability Cloud monitoring with OpenTelemetry Collector deployment, real-time metrics analytics, 
+            detectors, dashboards, and efficient visualization workflows.
+          </p>
+          <a href="programs/splunk-o11y-cloud-certified-metrics-user.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 18-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Certified Cybersecurity Defense Analyst</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Grow your skills for SOC analyst work using Splunk analytics, threat hunting, risk-based alerting, vulnerability 
+            management, and common cyber defense systems for continual monitoring.
+          </p>
+          <a href="programs/splunk-certified-cybersecurity-defense-analyst.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 19-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Cloud Security Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Cloud security certification roadmap covering AWS Security Specialty, Azure AZ-500, GCP 
+            security, CCSP, and cloud-native SIEM operations across multiple cloud providers.
+          </p>
+          <a href="programs/cloud-security-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 20-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Sentinel SIEM and Cloud Security Operations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive 10-module Microsoft Sentinel SIEM training covering architecture, data ingestion, KQL, detection 
+            engineering, incident response, threat hunting, and cloud security automation.
+          </p>
+          <a href="programs/sentinel-siem-cloud-security.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 21 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">SIEM SOC Operations with Microsoft Sentinel</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Master SIEM and cloud security operations with Microsoft Sentinel: data ingestion, KQL, detection rules, incident 
+            response, threat hunting, automation, and SOC dashboards.
+          </p>
+          <a href="programs/siem-soc-operations.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 22 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">QRadar SIEM Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            IBM QRadar SIEM certification roadmap covering security analyst, SOC operator, administrator, and architect 
+            tracks for enterprise threat detection and security operations.
+          </p>
+          <a href="programs/qradar-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 23-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">QRadar SIEM and SOC Operations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive 13-module IBM QRadar SIEM operations training covering architecture, event monitoring, threat 
+            detection, offense management, rules & correlation, and advanced security operations.
+          </p>
+          <a href="programs/qradar-siem-operations.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 24 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">AWS Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AWS Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive AWS certifications roadmap covering 14 AWS certifications across Foundational, Associate, 
+            Professional, and Specialty levels with hands-on lab training.
+          </p>
+          <a href="programs/aws-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 25 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">AWS Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AWS Cloud Architecture Professional</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Advanced 12-module AWS Cloud Architecture training for Solutions Architect Professional covering design patterns, 
+            multi-region solutions, networking, security, DevOps, and enterprise best practices.
+          </p>
+          <a href="programs/aws-cloud-architecture-professional.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 26 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Google Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Google Cloud Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Google Cloud certifications roadmap covering Foundational, Associate, Professional, and 
+            AI/ML certification pathways for cloud engineers and architects.
+          </p>
+          <a href="programs/google-cloud-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 27-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Google Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Google Cloud Professional Track</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive 11-module Google Cloud Professional Track aligned to Digital Leader, Associate, Professional, and AI certifications with practical labs.
+          </p>
+          <a href="programs/google-cloud-professional-track.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 28-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Networking</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Networking Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Networking certifications roadmap covering CompTIA Network+, Cisco CCNA/CCNP/CCIE, Juniper JNCIA/JNCIS, Azure AZ-700, and security networking paths.
+          </p>
+          <a href="programs/networking-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 29-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Networking</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Network Engineering Professional Track</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive 10-module Network Engineering Professional Track covering fundamentals, Cisco, 
+            Juniper, Azure networking, and security-focused networking skills.
+          </p>
+          <a href="programs/network-engineering-professional-track.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 29-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Information Security Audit Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Audit and governance certifications roadmap covering CISA, CISM, CRISC, ISO 27001 Lead Auditor, and CISSP with role-based progression guidance.
+          </p>
+          <a href="programs/audit-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 30-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Security Audit and Governance Operations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive 10-module security audit and governance training aligned to CISA, CISM, CRISC, ISO 27001 Lead Auditor, and CISSP domains.
+          </p>
+          <a href="programs/security-audit-and-governance-operations.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 31-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">IT and Security Governance Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Single-page governance certifications roadmap covering CGEIT, COBIT, CISM, CRISC, and ISO 27001 Lead 
+            Implementer for IT and security governance careers.
+          </p>
+          <a href="programs/governance-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 32-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Linux</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Linux Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Single-page Linux certifications roadmap covering Linux+, RHCSA, RHCE, LPIC, and Linux Foundation 
+            paths for system administration and enterprise operations.
+          </p>
+          <a href="programs/linux-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 33-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Kali Linux Ethical Hacking Fundamentals</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            HComprehensive 12-module Kali Linux ethical hacking fundamentals program covering installation, commands, networking, scanning, 
+            vulnerability assessment, wireless testing, exploitation basics, and reporting.
+          </p>
+          <a href="programs/kali-linux-ethical-hacking-fundamentals.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 34-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">VMware</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">VMware Certification Courses Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Single-page VMware certification roadmap covering vSphere, NSX, vSAN, Cloud Foundation, disaster 
+            recovery, SD-WAN, Aria operations, Kubernetes, and Azure integration.
+
+
+          </p>
+          <a href="programs/vmware-certification-courses-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 35-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Microsoft Azure Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Complete Microsoft Azure certification roadmap covering Fundamental (AZ-900, AI-900, DP-900, SC-900), Associate, 
+            Expert, and Security specialist tracks. 13+ certifications with hands-on Azure lab training.
+          </p>
+          <a href="programs/azure-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 36-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Microsoft Azure Administrator AZ-104</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Manage Azure identities, compute, storage, virtual networks, and cloud governance. Core certification for Azure administrators.
+          </p>
+          <a href="programs/azure-az104.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 37-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Microsoft Azure Fundamentals AZ-900</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Cloud concepts and Azure services for beginners. Entry-level certification covering Azure architecture, pricing, and support.
+          </p>
+          <a href="programs/azure-az900.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 38-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Microsoft Azure Security Engineer AZ-500</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Implement security controls, identity and access management, platform protection, and security operations in Azure.
+          </p>
+          <a href="programs/azure-az500.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 39-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Microsoft Azure Solutions Architect AZ-305</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Design governance, data storage, business continuity, and infrastructure solutions for enterprise Azure environments.
+          </p>
+          <a href="programs/azure-az305.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 40-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Microsoft DevOps Engineer AZ-400</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            DevOps practices, Azure DevOps pipelines, CI/CD, infrastructure as code, and release management on Azure.
+
+
+          </p>
+          <a href="programs/azure-devops-az400.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 41-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Cloud, Data, AI and Security Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course roadmap covering Microsoft cloud, data, AI, security, DevOps, AWS fundamentals, ITIL 
+            service management, and Cisco CCNA networking path.
+
+
+          </p>
+          <a href="programs/azure-devops-az400.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 42-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Database</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Oracle Enterprise and Cloud Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course Oracle roadmap covering Database 19c administration, SQL, multitenant, Data Guard, backup and recovery, 
+            OCI architecture, WebLogic, ODI, SOA, Exadata, Primavera, and Oracle 23ai features.
+          </p>
+          <a href="programs/cloud-data-security-certification-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 43-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">CompTIA Enterprise Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course CompTIA roadmap: SY0-701, N10-009, 1101-1102, 220-1101/220-1102, CySA+, PT0-002, XK0-005, DA0-001, 
+            CAS-004, CV0-004, CAS-005 (SecurityX), N10-008, ITF+, Cloud Essentials+, SK0-005.
+          </p>
+          <a href="programs/oracle-enterprise-cloud-certification-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 44-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">ISO Governance and Compliance Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course ISO governance roadmap covering ISO/IEC 27001 LI/LA, ISO 31000, ISO 9001 LI/LA, ISO/IEC 42001, ISO 22301 LI/LA, ISO 18788, 
+            ISO/IEC 27005, GDPR Foundation, Digital Transformation Officer, and Lead Cybersecurity Manager.
+          </p>
+          <a href="programs/comptia-enterprise-certification-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 45-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">ISC2 Cybersecurity Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            ISC2 roadmap covering CISSP, CCSP, CGRC, ISSAP, SSCP, Certified in Cybersecurity, ISSEP, 
+            ISSMP, and CAP for architecture, engineering, compliance, and leadership roles.
+          </p>
+          <a href="programs/isc2-certification-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 46-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Project Management</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">ITIL, PRINCE2 and Lean Six Sigma Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course roadmap covering ITIL 4 specialist/strategist/leader tracks, PRINCE2 and PRINCE2 Agile 
+            pathways, and IASSC Lean Six Sigma Yellow/Green/Black Belt certifications.
+          </p>
+          <a href="programs/itil-prince2-six-sigma-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 47-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Data</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">SAP S/4HANA Enterprise Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course SAP roadmap covering S4H00, UX100, ACT100, MDG100, MDG200, S4140, SAP Basis, S/4HANA Cloud Private Edition, 
+            RISE onboarding, ADM328 upgrade, HCM, Ariba AR710, DS10, and TS4F01.
+          </p>
+          <a href="programs/sap-s4hana-enterprise-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 48-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">EC-Council Cybersecurity Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course EC-Council roadmap covering CEH v13 AI, CPENT, CCISO, CEH v12, CSA, ECIH, ICS/SCADA cybersecurity, 
+            WAHS, CHFI v11, CCSE v2, CTIA v2, CBP v2, CND v3, EDRP v3, and CCT v1.
+          </p>
+          <a href="programs/ec-council-certification-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 49-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Linux</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Red Hat and OpenShift Enterprise Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course Red Hat and OpenShift roadmap covering RH124, RH134, RH199, RH294, DO180, DO188, DO280, 
+            DO288, RH415, AD248, RH436, DO322, CL260, and DO328 for enterprise platform engineering.
+          </p>
+          <a href="programs/redhat-openshift-enterprise-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 50-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">VMware</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">VMware Private Cloud Professional Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course VMware private cloud roadmap covering vSphere, Cloud Foundation, NSX, vSAN, Azure VMware Solution, 
+            Kubernetes operations, Aria Automation, Aria Operations, SRM, and SD-WAN design and deployment.
+          </p>
+          <a href="programs/show-all-courses-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 51-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Enterprise Cloud and Security Professional Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Show all selected 15 courses in one page: PL-300, AZ-104, AI-102, AWS Cloud Practitioner, DP-600, AZ-305, CISSP, SC-200, 
+            ITIL 4 Foundation, CCNA v2.1, SC-300, AZ-500, AZ-400, DW-101, and AZ-204.
+          </p>
+          <a href="programs/bcs-business-analysis-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 52-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Project Management</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">PMI Project, Program and Portfolio Leadership Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 15-course PMI roadmap covering PMP, CAPM, PMI-ACP, PgMP, PfMP, PMI-PBA, DASM, 
+            DAC, DASSM, PMI-SP, project budgeting, change management, and portfolio management.
+          </p>
+          <a href="programs/pmi-project-leadership-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 53-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Project Management</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">BCS Business Analysis and Architecture Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated 9-course BCS roadmap covering Business Analysis foundation and practice, enterprise and solution 
+            architecture, agile BA, information assurance architecture, business architecture, data management 
+            essentials, and IS project management.
+          </p>
+          <a href="programs/vmware-private-cloud-professional-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+    
+<!-- Footer Section -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Download App -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com</br>
+          +91 8383854378</br>
+          Bengaluru, Karnataka, India
+        </p>
+        
+      
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

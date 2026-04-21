@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course |  Strikava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body  class="text-white">
+
+
+<!-- Navbar -->
+<header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <div class="relative">
+      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+    </div>
+    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
+  </div>
+
+  <!-- Desktop Nav -->
+<nav class="hidden [@media(min-width:1350px)]:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
+
+  <!-- Home Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      HOME
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+      <a href="faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">FAQ</a>
+    </div>
+  </div>
+
+  <!-- About Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      ABOUT US
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+     <a href="about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+      <a href="why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Why Choose Us</a>
+    </div>
+  </div>
+
+  <!-- Training Programs Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      TRAINING PROGRAMS
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+      <a href="categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Google Cloud</a>
+      <a href="categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 transition">Cybersecurity</a>
+      <a href="categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Networking</a>
+       <a href="categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">DevOps</a>
+        <a href="categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Data & Analytics</a>
+         <a href="categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Project Management</a>
+          <a href="categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-b-xl transition">Microsoft Azure</a>
+    </div>
+  </div>
+
+  <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div class="absolute top-full left-0 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="programs.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="contact.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-pink-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+  <!-- Success Dropdown -->
+  <a href="success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      SUCCESS
+    </a>
+
+  <!-- Contact Dropdown -->
+  
+    <a href="contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CONTACT
+    </a>
+
+</nav>
+  
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-4">
+
+    <!-- Book Consultation (Tablet & Desktop only) -->
+    <a href="contact.html"
+      class="hidden md:inline-block lg:inline-block bg-gradient-to-r from-cyan-500 to-pink-500 px-5 py-3 rounded-md font-bold uppercase text-sm hover:scale-105 transition">
+      Book Consultation
+    </a>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="[@media(min-width:1351px)]:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0  bg-[#020617]/95 backdrop-blur-lg z-50 hidden flex-col p-6">
+
+  <!-- Close Button -->
+  <div class="flex justify-end mb-6">
+    <button id="closeMenu" class="text-white text-2xl">✕</button>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="flex flex-col gap-4 text-lg font-bold uppercase">
+
+    <!-- Home -->
+    <div class="relative group">
+      <button onclick="toggleSub('homeSub')" class="hover:text-cyan-400 transition flex items-center gap-1">HOME</button>
+      <div id="homeSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="index.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Home</a>
+        <a href="faq.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">FAQ</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="relative group">
+      <button onclick="toggleSub('aboutSub')" class="hover:text-cyan-400 transition flex items-center gap-1">ABOUT US</button>
+      <div id="aboutSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="about.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">About Us</a>
+        <a href="why-choose-us.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Why Choose Us</a>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="relative group">
+      <button onclick="toggleSub('trainSub')" class="hover:text-cyan-400 transition flex items-center gap-1">TRAINING PROGRAMS</button>
+      <div id="trainSub" class="absolute top-full left-0 mt-3 ml-20 w-52 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+        <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">AWS</a>
+        <a href="categories/google-cloud.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Google Cloud</a>
+        <a href="categories/cybersecurity.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Cybersecurity</a>
+        <a href="categories/networking.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Networking</a>
+         <a href="categories/devops.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">DevOps</a>        
+         <a href="categories/data.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Data & Analytics</a>
+         <a href="categories/project-management.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Project Management</a>
+         <a href="categories/microsoft-azure.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-400 rounded-t-xl transition">Microsoft Azure</a>
+      </div>
+    </div>
+
+ <!-- Corporate Training Dropdown -->
+  <div class="relative group">
+    <button onclick="toggleSub('corpSub')" class="hover:text-cyan-400 transition flex items-center gap-1">
+      CORPORATE TRAINING
+    </button>
+    <div id ="corpSub" class="absolute top-full left-0 ml-20 mt-3 w-56 bg-[#111827] border border-white/10 rounded-xl shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+      <a href="programs.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-t-xl transition">Programs</a>
+      <a href="contact.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 transition">Talk to Advisor</a>
+      <a href="categories/aws.html" class="block px-5 py-3 text-white hover:bg-cyan-500/10 hover:text-pink-400 rounded-b-xl transition">AWS Programs</a>
+    </div>
+  </div>
+
+    <a href="success-stories.html" class="hover:text-cyan-400 transition flex items-center gap-1">SUCCESS</a>
+    <a href="contact.html" class="hover:text-cyan-400 transition flex items-center gap-1">CONTACT</a>
+
+  </div>
+</div>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  function toggleSub(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+    </header>
+    
+<!------------heading section-->
+<section class="bg-[#0b1120] py-3 relative overflow-hidden">
+    
+  <!-- Background ambient glows -->
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="text-left mb-8">
+
+
+
+<!-- Search Bar -->
+    <div class="mt-4 flex justify-center">
+      <div class="relative w-full max-w-md">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <input 
+          type="text" 
+          placeholder="Search courses, programs, or topics..." 
+          class="w-full py-4 pl-12 pr-4 rounded-full bg-[#111827] border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition"
+        />
+        <button class="absolute right-2 top-2 bottom-2 px-6 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-medium text-sm hover:scale-105 transition">
+          Search
+        </button>
+      </div>
+    </div>
+
+  </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+        <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">High-Impact Programs for Cloud, Security, DevOps, and Data</span>
+      </h2>
+      <p class="text-gray-300 text-left md:text-lg max-w-2xl leading-relaxed">
+        Choose focused training tracks designed around job roles, project scenarios, and 
+        certifications. All programs available in Corporate and team formats.
+      </p>
+    </div>
+</div>
+</section>
+
+
+ 
+<!-- Course Catalog Section -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- Background ambient glows -->
+  <div class="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-600/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+
+
+    <!-- Course Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">AWS Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AWS Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Complete pathway across foundational, associate, professional, and specialty AWS certifications with practical cloud labs.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Role-based Path</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Live Labs</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: Cloud Engineer</span>
+          </div>
+          <a href="programs/aws-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Splunk</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Splunk Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive Splunk path for search, admin, enterprise security, SIEM operations, and SOC analyst career growth.
+          </p>
+           <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">12+ Certifications</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">SOC Focus</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: SOC Analyst</span>
+          </div>
+          <a href="programs/splunk-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 - -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Microsoft Azure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Microsoft Azure Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+           Structured Azure learning path from AZ-900 fundamentals to architect, security, and DevOps expert-level certifications.
+          </p>
+           <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Beginner to Expert</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Corporate / Group</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: Azure Administrator</span>
+          </div>
+          <a href="programs/azure-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 - -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">AWS Basics</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AWS Cloud Practitioner Fast Track</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Accelerated path to AWS Cloud Practitioner certification with core services, pricing models, and foundational architecture.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Entry Level</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Certification Ready</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: Cloud Beginner</span>
+          </div>
+          <a href="programs/aws-cloud-practitioner.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5 -  -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">AWS Solutions Architect</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AWS Solutions Architect Professional</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Expert-level architecture patterns, multi-region deployments, and enterprise-scale cloud design with hands-on labs.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Advanced Path</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Design Patterns</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: Solutions Architect</span>
+          </div>
+          <a href="programs/aws-solutions-architect-professional.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6 - -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Cybersecurity</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Cybersecurity Fundamentals and Compliance</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+           Foundation in security principles, risk management, compliance frameworks (ISO 27001, SOC 2), and incident response basics.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Beginner Friendly</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Compliance Focus</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: Security Analyst</span>
+          </div>
+          <a href="programs/cybersecurity-fundamentals.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Card 7-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Networking</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Cloud Networking and Connectivity</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Design and implement virtual networks, ExpressRoute, Direct Connect, load balancing, and multi-region connectivity.
+          </p>
+                   <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Hands-on Labs</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Advanced</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: Network Architect</span>
+          </div>
+          <a href="programs/cloud-networking-connectivity.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 8-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Microsoft Sentinel</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Sentinel SIEM and Cloud Security Operations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Detection engineering, KQL-based threat hunting, incident response, and cloud security automation workflows.
+          </p>
+           <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">10 Modules</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Case-driven Labs</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Best for: Security Analyst</span>
+          </div>
+          <a href="programs/sentinel-siem-cloud-security.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 9-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">DevOps</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AWS DevOps Engineer Professional</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Advanced DevOps practices with CI/CD, infrastructure automation, observability, and secure deployment pipelines.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Professional Level</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Labs</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: DevOps Engineer</span>
+          </div>
+          <a href="programs/aws-devops-engineer-professional.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 10-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Multi-Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Hybrid and Multi-Cloud Architecture</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Design and implement solutions across AWS, Azure, and GCP with focus on interoperability and cost optimization.
+          </p>
+           <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Advanced Track</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Practice</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Cloud Architect</span>
+          </div>
+          <a href="programs/hybrid-multicloud-architecture.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 11-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Incident Response</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Incident Response and Threat Intelligence</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Incident handling methodology, Digital forensics, threat hunting, and analysis for security operations centers.
+          </p>
+              <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">SOC Focused</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Cases</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Security Operations Analyst</span>
+          </div>
+          <a href="programs/incident-response-forensics.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 12-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Google Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Google Cloud Professional Track</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Professional GCP track aligned to associate and professional certifications with enterprise-ready implementation practice.
+          </p>
+             <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">11 Modules</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Practice</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Cloud Architect</span>
+          </div>
+          <a href="programs/google-cloud-professional-track.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 13-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Network Security</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Network Security Fundamentals and Advanced</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive network security including firewalls, VPN, intrusion detection, DDoS mitigation, and security protocols.
+          </p>
+              <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Labs</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Enterprise Focus</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Network Security Engineer</span>
+          </div>
+          <a href="programs/network-security-fundamentals.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 14-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Kubernetes</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Kubernetes Advanced: Architecture and Operations</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Advanced Kubernetes concepts, cluster administration, security, networking, and production deployment patterns.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Advanced Track</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Labs</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Platform Engineer</span>
+            </div>
+          <a href="programs/kubernetes-advanced.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 15 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Platform</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Red Hat OpenShift Enterprise Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Container platform roadmap covering OpenShift operations, DevSecOps workflows, and enterprise deployment practices.
+          </p>
+              <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Enterprise Platform</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Cloud-native</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Platform Engineer</span>
+            </div>
+          <a href="programs/redhat-openshift-enterprise-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 16-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">AWS Security</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AWS Security Specialty Certification</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+           Deep dive into AWS security services, IAM, encryption, compliance, and incident response for enterprise deployments.
+          </p>
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Specialty Track</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Security Focus</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Security Engineer</span>
+            </div>
+          <a href="programs/aws-security-specialty.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 17-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Data and Cloud</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Cloud, Data, AI and Security Certification Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Integrated roadmap across cloud, data, AI, security, DevOps, and networking for multi-skill career acceleration.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Integrated Track</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Career Accelerator</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Data and Cloud Engineer</span>
+            </div>
+          <a href="programs/cloud-data-security-certification-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 18-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">Cloud Security</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Cloud Security Architecture and Compliance</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Secure cloud deployments, identity management, data protection, compliance automation, and security governance.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Advanced Track</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Compliance Focus</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Cloud Security Architect</span>
+            </div>
+          <a href="programs/cloud-security-architecture.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 19-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">DevOps Basics</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Docker, Kubernetes and Container Orchestration</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Comprehensive container fundamentals, Docker best practices, Kubernetes architecture, and deployment strategies.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">10 Modules</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Labs</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: DevOps Engineer</span>
+            </div>
+          <a href="programs/docker-kubernetes-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 20-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/60 to-indigo-950/60 backdrop-blur-sm border border-blue-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold">Python Data</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Python for Data Science and Analytics</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Learn Python programming with libraries like Pandas, NumPy, and Scikit-learn for data analysis and machine learning basics.
+          </p>
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Coding</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Data Science</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Data Scientist</span>
+            </div>
+          <a href="programs/python-data-science.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 21 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-950/60 to-teal-950/60 backdrop-blur-sm border border-green-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">IBM QRadar</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">QRadar SIEM Certifications Roadmap</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Role-based roadmap for analyst, operator, administrator, and architect tracks in enterprise security operations.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Roadmap + Practice</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Enterprise SIEM</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: SIEM Engineer</span>
+            </div>
+          <a href="programs/qradar-certifications-roadmap.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 22 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/60 to-pink-950/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-purple-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold">Infrastructure</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Infrastructure as Code with Terraform and Ansible</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Automate infrastructure provisioning with Terraform and configuration management with Ansible across multiple cloud providers.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Projects</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Automation Focus</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Infrastructure Engineer</span>
+            </div>
+          <a href="programs/infrastructure-as-code.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 23-->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-950/60 to-amber-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-yellow-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-semibold">Data Engineering</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Data Engineering Essentials and Analytics</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Build scalable data pipelines with Python, SQL, Apache Spark, and cloud data warehousing platforms for analytics.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Intermediate</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Projects</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Data Engineer</span>
+            </div>
+          <a href="programs/data-engineering-essentials.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 24 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-blue-950/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold">CI/CD</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">GitLab CI/CD and Jenkins Pipeline Automation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Build automated CI/CD pipelines with GitLab, Jenkins, and deployment strategies for containerized applications.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Labs</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Automation</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: DevOps Engineer</span>
+            </div>
+          <a href="programs/cicd-gitlab-jenkins.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Card 25 -->
+      <div class="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-950/60 to-orange-950/60 backdrop-blur-sm border border-red-500/20 rounded-2xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent rounded-2xl"></div>
+        <div class="relative p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-semibold">Databases</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">SQL, NoSQL and Cloud Data Warehousing</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Master relational and non-relational databases, SQL optimization, and cloud warehouse platforms like Snowflake and BigQuery.
+          </p>
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Hands-on Practice</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Intermediate</span>
+            <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-semibold">Best for: Database Administrator</span>
+            </div>
+          <a href="programs/sql-nosql-databases.html" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition">
+            View Program <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+   
+<!-----------question ask card -->
+<section class="bg-[#0b1120] py-24 relative overflow-hidden">
+  <!-- Background ambient glows -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-10 relative z-10">
+    
+    <!-- Main Card -->
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl">
+      <!-- Top neon line -->
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-cyan-400"></div>
+      
+      <!-- Inner glow -->
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-pink-500/5"></div>
+
+      <div class="relative p-8 md:p-12 text-center">
+        
+
+        <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-8">
+          Not sure which course is right for your role?
+        </h2>
+
+          <!-- Bullet points -->
+          
+            <p class="text-gray-200 font-medium">Get role-wise recommendations, compare certifications, 
+                and choose the most relevant program path with advisor support.</p>
+          </div>
+ <!-- button section -->
+        <div class="flex justify-center gap-3 mb-8 relative z-20">
+          <a href="programs.html" class="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium">
+            Explore Full Program Catalog
+          </a>
+        </div>
+        </div>
+        </div>
+</section>
+
+
+
+
+    
+<!-- Footer Section -->
+<footer class="bg-[#0a0f1f] border-t border-white/10 relative overflow-hidden">
+  <!-- Background glows -->
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+  <div class="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-16 relative z-10">
+    
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Column 1 - Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="relative">
+            <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
+            <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white tracking-wide"> Strikava</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Enterprise IT training company helping professionals build cloud and DevOps careers.
+        </p>
+      </div>
+
+      <!-- Column 2 - About Company -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Links
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Courses</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Programs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Why Choose Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Legal Notice</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition text-sm">Refund Policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Column 4 - Download App -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+          Contact
+          <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+        </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          info@strikava.com</br>
+          +91 8383854378</br>
+          Bengaluru, Karnataka, India
+        </p>
+        
+      
+      </div>
+    </div>
+
+    <!-------------footer info-->
+      <div>
+          <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+            Legal and Copyright Notice
+              <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-full"></div>
+          </h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          This website and its original content, layout, graphics, copywriting, and branding are protected under applicable 
+          copyright and trademark laws.
+          Copyright owner:  Strikava. All rights reserved.
+          Any unauthorized copying, redistribution, republication, automated scraping, or commercial reuse is prohibited without 
+          written permission. Third-party logos, certification names, and brand references (including AWS, Microsoft Azure, Google
+          Cloud, and others) belong to their respective owners. Brand references are used only for training and informational 
+          identification and do not imply partnership, sponsorship, or endorsement unless explicitly stated. If you believe any content 
+          on this page infringes your rights, contact info@strikava.com with evidence for review and prompt action.
+          By accessing this site, users agree to the terms published in our Terms of Service, Privacy Policy, and Refund Policy. 
+          Training guidance, interview support, and learning outcomes may vary by learner background, effort, market conditions, and 
+          execution; no job placement or salary outcome is guaranteed unless explicitly committed in writing.</p>    
+
+      <div class="text-center">
+          <p class="text-gray-500 text-sm">
+            Third-party names, logos, course titles, and trademarks are property of their respective owners and are used only for 
+            identification and educational reference.
+            No sponsorship, endorsement, or affiliation is implied unless explicitly stated.
+            Training guidance, interview support, and learner outcomes vary by experience, effort, and market conditions; no job placement or 
+            salary outcome is guaranteed unless explicitly stated in writing.
+          </p>
+      </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10">
+      <!-- Policy Links -->
+      <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <a href="terms.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Terms of Service</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="privacy-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Privacy Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="refund-policy.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Refund Policy</a>
+        <span class="text-gray-600 text-xs">|</span>
+        <a href="legal-notice.html" class="text-gray-500 hover:text-cyan-400 text-xs uppercase tracking-wider transition">Legal Notice</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-gray-500 text-sm">
+          Copyright 2026  Strikava. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
