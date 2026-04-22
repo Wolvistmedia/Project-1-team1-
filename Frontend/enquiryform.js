@@ -16,7 +16,7 @@
 
     try {
       // 2. Send the POST request to your API
-      const response = await fetch('http://localhost:8080/inquiry', {
+      const response = await fetch('https://strikava-backend.onrender.com/inquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
