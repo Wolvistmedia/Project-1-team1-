@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyber Security Hero</title>
+  <title>Strikava Cyber Security</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -37,13 +37,12 @@
     </div>
 
 <!-- Navbar -->
-    <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between">
+    <header class="relative z-20 w-full px-6 md:px-10 lg:px-16 py-6 flex items-center justify-between bg-[#0b1a3a;]">
 
   <!-- Logo -->
   <div class="flex items-center gap-3">
     <div class="relative">
-      <div class="w-10 h-10 border-2 border-cyan-400 rotate-45 rounded-md shadow-[0_0_20px_#22d3ee]"></div>
-      <div class="absolute inset-2 border-2 border-pink-500 rotate-45 rounded-sm"></div>
+      <img src="images/logo.jpeg" style="width:120px;" > 
     </div>
     <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Strikava</h1>
   </div>
@@ -254,57 +253,70 @@
         </div>
 
         <!-- Right Hero Graphic -->
-        <div class="relative flex items-center justify-center">
-          <!-- Outer circular glow -->
-          <div class="absolute w-[520px] h-[520px] rounded-full border border-cyan-400/10"></div>
-          <div class="absolute w-[440px] h-[440px] rounded-full border border-pink-400/10"></div>
+        <!-- Shield section – now correctly hidden below 1150px -->
+  <!-- Note: removed the 'flex' class from Tailwind to avoid conflicts -->
+  <div class="shield-desktop relative items-center justify-center">
+    <!-- Outer circular glows -->
+    <div class="absolute w-[520px] h-[520px] rounded-full border border-cyan-400/10"></div>
+    <div class="absolute w-[440px] h-[440px] rounded-full border border-pink-400/10"></div>
 
-          <!-- Diagonal neon lines -->
-          <div class="absolute w-[520px] h-[520px] rounded-full border-t-2 border-cyan-400/50 rotate-[25deg] shadow-[0_0_30px_#22d3ee]"></div>
-          <div class="absolute w-[500px] h-[500px] rounded-full border-b-2 border-blue-400/30 rotate-[-20deg]"></div>
+    <!-- Diagonal neon lines -->
+    <div class="absolute w-[520px] h-[520px] rounded-full border-t-2 border-cyan-400/50 rotate-[25deg] shadow-[0_0_30px_#22d3ee]"></div>
+    <div class="absolute w-[500px] h-[500px] rounded-full border-b-2 border-blue-400/30 rotate-[-20deg]"></div>
 
-          <!-- Shield SVG -->
-          <div class="float relative shield-glow">
-            <svg width="420" height="460" viewBox="0 0 420 460" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Shield Outline -->
-              <path d="M210 30
-                       C250 70, 310 80, 350 95
-                       V220
-                       C350 320, 290 390, 210 430
-                       C130 390, 70 320, 70 220
-                       V95
-                       C110 80, 170 70, 210 30Z"
-                    stroke="url(#shieldGradient)"
-                    stroke-width="8"
-                    fill="rgba(20,30,70,0.18)" />
+    <!-- Shield SVG -->
+    <div class="float relative shield-glow">
+      <svg width="420" height="460" viewBox="0 0 420 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shield Outline -->
+        <path d="M210 30
+                 C250 70, 310 80, 350 95
+                 V220
+                 C350 320, 290 390, 210 430
+                 C130 390, 70 320, 70 220
+                 V95
+                 C110 80, 170 70, 210 30Z"
+              stroke="url(#shieldGradient)"
+              stroke-width="8"
+              fill="rgba(20,30,70,0.18)" />
 
-              <!-- Inner circuit lines -->
-              <path d="M115 150 H300" stroke="#3ecbff" stroke-opacity="0.35" stroke-width="3"/>
-              <path d="M105 185 H310" stroke="#3ecbff" stroke-opacity="0.25" stroke-width="2"/>
-              <path d="M120 220 H295" stroke="#3ecbff" stroke-opacity="0.35" stroke-width="3"/>
-              <path d="M110 255 H305" stroke="#3ecbff" stroke-opacity="0.25" stroke-width="2"/>
-              <path d="M125 290 H290" stroke="#3ecbff" stroke-opacity="0.35" stroke-width="3"/>
+        <!-- Inner circuit lines -->
+        <path d="M115 150 H300" stroke="#3ecbff" stroke-opacity="0.35" stroke-width="3"/>
+        <path d="M105 185 H310" stroke="#3ecbff" stroke-opacity="0.25" stroke-width="2"/>
+        <path d="M120 220 H295" stroke="#3ecbff" stroke-opacity="0.35" stroke-width="3"/>
+        <path d="M110 255 H305" stroke="#3ecbff" stroke-opacity="0.25" stroke-width="2"/>
+        <path d="M125 290 H290" stroke="#3ecbff" stroke-opacity="0.35" stroke-width="3"/>
 
-              <!-- Lock hole -->
-              <circle cx="210" cy="210" r="24" stroke="#e2f4ff" stroke-width="6" fill="none"/>
-              <path d="M190 250
-                       C190 230, 230 230, 230 250
-                       V315
-                       H190V250Z"
-                    stroke="#e2f4ff"
-                    stroke-width="6"
-                    fill="none"/>
+        <!-- Lock hole -->
+        <circle cx="210" cy="210" r="24" stroke="#e2f4ff" stroke-width="6" fill="none"/>
+        <path d="M190 250
+                 C190 230, 230 230, 230 250
+                 V315
+                 H190V250Z"
+              stroke="#e2f4ff"
+              stroke-width="6"
+              fill="none"/>
 
-              <defs>
-                <linearGradient id="shieldGradient" x1="70" y1="30" x2="350" y2="430" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#ff4fd8"/>
-                  <stop offset="0.5" stop-color="#6d7cff"/>
-                  <stop offset="1" stop-color="#54f3ff"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-        </div>
+        <defs>
+          <linearGradient id="shieldGradient" x1="70" y1="30" x2="350" y2="430" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ff4fd8"/>
+            <stop offset="0.5" stop-color="#6d7cff"/>
+            <stop offset="1" stop-color="#54f3ff"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+  <script>
+    function updateWidth() {
+      const width = window.innerWidth;
+      document.getElementById('widthDisplay').innerText = width;
+      const shield = document.querySelector('.shield-desktop');
+      const status = shield ? (getComputedStyle(shield).display === 'flex' ? 'YES (≥1350px)' : 'NO (<1350px)') : 'element not found';
+      document.getElementById('shieldStatus').innerText = status;
+    }
+    window.addEventListener('resize', updateWidth);
+    updateWidth();
+  </script>
 
       </div>
     </div>
@@ -1413,84 +1425,6 @@
   </div>
 </section>
 
-<!--------video testimonial-->
-<section class="bg-[#0b1120] py-20 relative overflow-hidden">
-  <!-- Background ambient glows -->
-  <div class="absolute -top-32 -left-32 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
-  <div class="absolute bottom-0 right-0 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full"></div>
-
-  <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
-    <!-- Main card with gradient border & glass effect -->
-    <div class="relative rounded-3xl bg-gradient-to-br from-[#0f172a] to-[#0a0f1f] border border-white/10 shadow-2xl overflow-hidden">
-      <!-- Inner glow lines (decor) -->
-      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-40"></div>
-      <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-30"></div>
-      
-      <div class="grid md:grid-cols-2 gap-8 p-8 md:p-12">
-        
-
-        <!-- Left Side: YouTube Video -->
-<div class="space-y-4">
-  <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Video Testimonials</h3>
-
-  <div class="relative rounded-2xl overflow-hidden border border-cyan-400/20 shadow-[0_0_30px_rgba(34,211,238,0.08)] bg-black">
-    <video 
-      class="w-full h-[280px] md:h-[320px] object-cover"
-      controls
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      <source src="videos/cyber.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-
-        <!-- Right Side: description -->
-        <div class="space-y-6">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/30">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Description</h3>
-          </div>
-          <p class="text-gray-300 text-base md:text-lg leading-relaxed pl-11">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor ut labore.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- headline strip -->
-      <div class="relative bg-gradient-to-r from-cyan-900/30 via-indigo-900/20 to-pink-900/30 border-t border-white/5 border-b border-white/5 py-5 px-6 md:px-12 mt-2">
-        <div class="flex flex-wrap items-center justify-between gap-4">
-          <div class="flex items-center gap-4">
-            <!-- Animated pulse dot -->
-            <div class="relative">
-              <span class="flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
-              </span>
-            </div>
-            <p class="text-white font-mono text-sm md:text-base tracking-wider uppercase font-semibold">
-              "The mentor roadmap helped me switch from support to a cloud role."
-            </p>
-          </div>
-          <div class="text-cyan-300 font-mono tracking-wider">
-            view more
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom decorative neon line -->
-      <div class="h-0.5 w-full bg-gradient-to-r from-cyan-500/30 via-pink-500/30 to-cyan-500/30"></div>
-    </div>
-  </div>
-</section>
 
 
 

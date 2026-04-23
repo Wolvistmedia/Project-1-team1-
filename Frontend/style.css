@@ -62,5 +62,16 @@
       0%,100% { transform: translateY(0px); }
       50% { transform: translateY(-12px); }
     }
+ /* Default: shield is hidden (with !important to override Tailwind's flex) */
+    .shield-desktop {
+      display: none !important;
+    }
 
+    /* Show shield only on screens 1350px and wider */
+    @media (min-width: 1150px) {
+      .shield-desktop {
+        display: flex !important;
+      }
+    }
+    
     
