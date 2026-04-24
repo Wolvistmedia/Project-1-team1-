@@ -6,6 +6,7 @@
   <title>Strikava Cyber Security</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-white">
 
@@ -1775,5 +1776,24 @@
 
   </div>
 </footer>
+<div id="chat-icon">
+  <span id="chat-badge">1</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+    <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+  </svg>
+</div>
+<div id="chatbox">
+  
+  <div id="chat-header">
+    <span>Strikava Assistant</span>
+    <span id="close-chat">✖</span>
+  </div>
+  <div id="chat-body"></div>
+  <div id="chat-input-area">
+    <input id="chat-input" placeholder="Type your message..." />
+    <button id="send-btn">➤</button>
+  </div>
+</div>
+<script src="chatbot.js"></script>
 </body>
 </html>
